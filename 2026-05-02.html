@@ -5,80 +5,214 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI 资讯日报 - 2026-05-02</title>
 <style>
-  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text-dim: #8b949e; --accent: #58a6ff; --green: #3fb950; }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; padding: 20px; }
-  .container { max-width: 860px; margin: 0 auto; }
-  header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
-  header h1 { font-size: 1.8em; margin-bottom: 8px; }
-  header .subtitle { color: var(--text-dim); font-size: 0.9em; }
-  header .subtitle a { color: var(--accent); text-decoration: none; }
-  section { margin-bottom: 28px; }
-  h2 { font-size: 1.15em; color: var(--accent); margin-bottom: 14px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
-  .news-item { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; margin-bottom: 8px; transition: border-color 0.2s; }
-  .news-item:hover { border-color: var(--accent); }
-  .badge { display: inline-block; font-size: 0.75em; padding: 2px 8px; border-radius: 10px; background: #1f2937; color: var(--green); margin-right: 8px; vertical-align: middle; }
-  .news-item a { color: var(--text); text-decoration: none; font-size: 0.95em; }
-  .news-item a:hover { color: var(--accent); }
-  .summary { color: var(--text-dim); font-size: 0.85em; margin-top: 4px; line-height: 1.5; }
-  .archives { margin-top: 30px; padding: 16px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; }
-  .archives h3 { font-size: 0.95em; margin-bottom: 10px; color: var(--text-dim); }
-  .archive-link { display: inline-block; margin: 3px 6px 3px 0; padding: 4px 10px; background: #1f2937; border-radius: 6px; color: var(--accent); text-decoration: none; font-size: 0.85em; }
-  .archive-link:hover { background: var(--accent); color: var(--bg); }
-  footer { text-align: center; color: var(--text-dim); font-size: 0.8em; padding: 30px 0; border-top: 1px solid var(--border); margin-top: 40px; }
-  @media (max-width: 600px) { body { padding: 12px; } header h1 { font-size: 1.4em; } .news-item { padding: 10px 12px; } }
+:root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --green: #3fb950; --radius: 12px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+.container { max-width: 820px; margin: 0 auto; padding: 24px 16px; }
+header { text-align: center; padding: 40px 0 32px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+header h1 { font-size: 28px; font-weight: 700; }
+header .date { color: var(--muted); font-size: 15px; margin-top: 6px; }
+.section-title { font-size: 18px; font-weight: 600; margin: 28px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); display: inline-block; }
+.news-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin-bottom: 10px; transition: border-color .2s; }
+.news-card:hover { border-color: var(--accent); }
+.source-badge { display: inline-block; font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+.news-title { display: block; font-size: 15px; color: var(--text); text-decoration: none; line-height: 1.5; }
+.news-title:hover { color: var(--accent); text-decoration: underline; }
+footer { margin-top: 48px; padding: 24px 0; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 13px; }
+footer a { color: var(--accent); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+.archive { margin-top: 32px; }
+.archive h3 { font-size: 15px; color: var(--muted); margin-bottom: 12px; }
+.archive-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.archive-item { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 6px 12px; font-size: 13px; color: var(--text); text-decoration: none; }
+.archive-item:hover { border-color: var(--accent); }
+@media (max-width: 600px) { header h1 { font-size: 22px; } .news-title { font-size: 14px; } }
 </style>
 </head>
 <body>
 <div class="container">
-  <header>
-    <h1>📡 AI 资讯日报</h1>
-    <div class="subtitle">2026-05-02 · <a href="https://github.com/leach-chen/ai-news-daily" target="_blank">自动采集</a> · 国内 10 条 / 国际 13 条 / 论文 5 篇</div>
-  </header>
-    <section><h2>🇨🇳 国内动态</h2>
-<div class="news-item"><span class="badge">36氪</span> <a href="https://36kr.com/p/3789145559473152" target="_blank" rel="noopener">DeepSeek V4 发布：成本大降，华为昇腾适配，AI 产业格局生变</a><p class="summary">DeepSeek V4 正式发布，成本大幅降低并适配华为昇腾，AI 产业格局正在重塑。</p></div>
-<div class="news-item"><span class="badge">36氪</span> <a href="https://36kr.com/p/3789208597372165" target="_blank" rel="noopener">DeepSeek 多模态技术范式公布，以视觉原语思考</a><p class="summary">DeepSeek 公布全新多模态技术范式 Thinking with Visual Primitives。</p></div>
-<div class="news-item"><span class="badge">36氪</span> <a href="https://36kr.com/p/3789105348812037" target="_blank" rel="noopener">GPT-5.6 曝光，GPT-5.5 迷恋哥布林，OpenAI 连夜封禁</a><p class="summary">GPT-5.5 出现诡异行为，OpenAI 紧急封禁，GPT-5.6 已开始偷跑。</p></div>
-<div class="news-item"><span class="badge">36氪</span> <a href="https://36kr.com/p/3789105070873856" target="_blank" rel="noopener">ChatGPT 卸载暴涨 413%，Claude 下载激增 100%</a><p class="summary">用户用脚投票，Anthropic 估值将破 9000 亿美元。</p></div>
-<div class="news-item"><span class="badge">36氪</span> <a href="https://36kr.com/p/3789078888979712" target="_blank" rel="noopener">苹果 AI 眼镜最新爆料：双摄像头+手势操作</a><p class="summary">苹果 AI 眼镜或将与 Meta 竞争。</p></div>
-<div class="news-item"><span class="badge">36氪</span> <a href="https://36kr.com/p/3789078876151044" target="_blank" rel="noopener">小米最新人形机器人手会『出汗』了</a><p class="summary">小米人形机器人机械手实现仿生出汗功能。</p></div>
-<div class="news-item"><span class="badge">36氪</span> <a href="https://36kr.com/p/3788895533095937" target="_blank" rel="noopener">图灵奖得主炮轰：AI Agent 最后全是数据库问题</a><p class="summary">数据库'祖师爷'给 AI 泼冷水：Agent 绕不开老问题。</p></div>
-<div class="news-item"><span class="badge">36氪</span> <a href="https://36kr.com/p/3788865917530627" target="_blank" rel="noopener">OpenAI 或在 2028 年量产 AI 手机</a><p class="summary">OpenAI 计划推出搭载 AI Agent 的手机。</p></div>
-<div class="news-item"><span class="badge">36氪</span> <a href="https://36kr.com/p/3789078775094272" target="_blank" rel="noopener">Claude 定价反复横跳，先养熟再收割</a><p class="summary">Anthropic 被指采用先低价养用户再逐步提价的定价策略。</p></div>
-<div class="news-item"><span class="badge">36氪</span> <a href="https://36kr.com/p/3788937709449989" target="_blank" rel="noopener">寒武纪赚 10 亿、摩尔线程首次盈利、沐曦亏损</a><p class="summary">三家国产 GPU 公司财报对比。</p></div>
-</section>
+    <header>
+        <h1>📡 AI 资讯日报</h1>
+        <div class="date">2026-05-02 · 自动采集国内外AI动态</div>
+    </header>
 
-    <section><h2>🌍 国际动态</h2>
-<div class="news-item"><span class="badge">TechCrunch</span> <a href="https://techcrunch.com/2026/04/30/anthropic-potential-900b-valuation-round-could-happen-within-two-weeks/" target="_blank" rel="noopener">Anthropic 新一轮融资估值或达 $9000 亿</a><p class="summary">Anthropic 要求投资者 48 小时内提交融资分配方案。</p></div>
-<div class="news-item"><span class="badge">TechCrunch</span> <a href="https://techcrunch.com/2026/04/30/elon-musk-testifies-that-xai-trained-grok-on-openai-models/" target="_blank" rel="noopener">Elon Musk 承认 xAI 使用 OpenAI 模型训练 Grok</a><p class="summary">Musk v. Altman 庭审中承认用 OpenAI 模型蒸馏训练 Grok。</p></div>
-<div class="news-item"><span class="badge">TechCrunch</span> <a href="https://techcrunch.com/2026/05/01/meta-buys-robotics-startup-to-bolster-its-humanoid-ai-ambitions/" target="_blank" rel="noopener">Meta 收购机器人初创公司</a><p class="summary">Meta 加强人形 AI 机器人领域布局。</p></div>
-<div class="news-item"><span class="badge">TechCrunch</span> <a href="https://techcrunch.com/2026/05/01/pentagon-inks-deals-with-nvidia-microsoft-and-aws-to-deploy-ai-on-classified-networks/" target="_blank" rel="noopener">五角大楼与 Nvidia、Microsoft、AWS 签署 AI 协议</a><p class="summary">机密网络 AI 部署协议签署。</p></div>
-<div class="news-item"><span class="badge">TechCrunch</span> <a href="https://techcrunch.com/2026/04/30/chatgpt-images-2-0-is-a-hit-in-india-but-not-a-big-winner-elsewhere-yet/" target="_blank" rel="noopener">ChatGPT Images 2.0 在印度大火</a><p class="summary">ChatGPT 图像生成在印度大受欢迎。</p></div>
-<div class="news-item"><span class="badge">TechCrunch</span> <a href="https://techcrunch.com/2026/04/30/apple-was-surprised-by-ai-driven-demand-for-macs/" target="_blank" rel="noopener">Apple 对 AI 驱动 Mac 需求感到意外</a><p class="summary">AI 驱动 Mac 需求超预期，供应受限。</p></div>
-<div class="news-item"><span class="badge">TechCrunch</span> <a href="https://techcrunch.com/2026/04/30/googles-gemini-ai-assistant-is-hitting-the-road-in-millions-of-vehicles/" target="_blank" rel="noopener">Google Gemini 登陆数百万辆汽车</a><p class="summary">Gemini AI 助手整合到车载系统。</p></div>
-<div class="news-item"><span class="badge">TechCrunch</span> <a href="https://techcrunch.com/2026/04/29/microsoft-says-it-has-over-20m-paid-copilot-users-and-they-really-are-using-it/" target="_blank" rel="noopener">Microsoft 超 2000 万付费 Copilot 用户</a><p class="summary">Copilot 付费用户增长显著。</p></div>
-<div class="news-item"><span class="badge">TechCrunch</span> <a href="https://techcrunch.com/2026/04/27/deepminds-david-silver-just-raised-1-1b-to-build-an-ai-that-learns-without-human-data/" target="_blank" rel="noopener">DeepMind 创始人获 11 亿美元融资</a><p class="summary">David Silver 打造无需人类数据的学习 AI。</p></div>
-<div class="news-item"><span class="badge">The Verge</span> <a href="https://www.theverge.com/news/808589/senators-ai-chatbot-bill-age-verification-teen-ban" target="_blank" rel="noopener">参议员提案禁止青少年使用 AI 聊天机器人</a><p class="summary">美国参议员提议禁止青少年使用 AI 聊天机器人。</p></div>
-<div class="news-item"><span class="badge">The Verge</span> <a href="https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia" target="_blank" rel="noopener">五角大楼与 OpenAI、Google 达成机密 AI 交易</a><p class="summary">Anthropic 被排除在机密 AI 合作之外。</p></div>
-<div class="news-item"><span class="badge">BBC</span> <a href="https://www.bbc.com/news/articles/c5yerr4m1yno" target="_blank" rel="noopener">Spotify 为人类艺术家添加认证标识</a><p class="summary">区分人类艺术家和 AI 生成音乐。</p></div>
-<div class="news-item"><span class="badge">Wired</span> <a href="https://www.wired.com/story/when-robots-have-their-chatgpt-moment-remember-these-pincers/" target="_blank" rel="noopener">Eka 机械爪：机器人领域的 ChatGPT 时刻</a><p class="summary">Eka 机器人机械爪展示惊人灵巧度。</p></div>
-</section>
+    
+    <section>
+        <h2 class="section-title">国内动态</h2>
+        
+        <div class="news-card">
+            <span class="source-badge">🇨🇳 36氪</span>
+            <a href="https://36kr.com/p/3791796527602951" target="_blank" rel="noopener" class="news-title">又一算力独角兽，冲击IPO</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🇨🇳 36氪</span>
+            <a href="https://36kr.com/p/3791662444911617" target="_blank" rel="noopener" class="news-title">苹果官方App误打包了Claude.md，这么大的公司也Vibe Coding啊？</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🇨🇳 36氪</span>
+            <a href="https://36kr.com/p/3791622190854916" target="_blank" rel="noopener" class="news-title">那个在OpenAI修中文的人</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🇨🇳 36氪</span>
+            <a href="https://36kr.com/p/3791556962972417" target="_blank" rel="noopener" class="news-title">AI抢走了你的内存条</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🇨🇳 36氪</span>
+            <a href="https://36kr.com/p/3791460373929221" target="_blank" rel="noopener" class="news-title">马斯克翻车了！一边告OpenAI，一边偷偷蒸馏ChatGPT</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🇨🇳 36氪</span>
+            <a href="https://36kr.com/p/3790774863884802" target="_blank" rel="noopener" class="news-title">AI时代有自己的“手势舞”</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🇨🇳 36氪</span>
+            <a href="https://36kr.com/p/3790047344488961" target="_blank" rel="noopener" class="news-title">DeepSeek给AI装了根赛博手指，于是它能看见了</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🇨🇳 36氪</span>
+            <a href="https://36kr.com/p/3748263885914880" target="_blank" rel="noopener" class="news-title">职场残酷预演：当AI学会自动进化，初级人才的生存空间正被“200小时智能体”挤压殆尽</a>
+        </div>
+    </section>
+    <section>
+        <h2 class="section-title">国际动态</h2>
+        
+        <div class="news-card">
+            <span class="source-badge">🌍 TechCrunch</span>
+            <a href="https://techcrunch.com/2026/05/01/replits-amjad-masad-on-the-cursor-deal-fighting-apple-and-why-hed-rather-not-sell/" target="_blank" rel="noopener" class="news-title">Replit’s Amjad Masad on the Cursor deal, fighting Apple, and why he’d rather not sell</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🌍 TechCrunch</span>
+            <a href="https://techcrunch.com/2026/05/01/meta-buys-robotics-startup-to-bolster-its-humanoid-ai-ambitions/" target="_blank" rel="noopener" class="news-title">Meta buys robotics startup to bolster its humanoid AI ambitions</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🌍 TechCrunch</span>
+            <a href="https://techcrunch.com/2026/05/01/pentagon-inks-deals-with-nvidia-microsoft-and-aws-to-deploy-ai-on-classified-networks/" target="_blank" rel="noopener" class="news-title">Pentagon inks deals with Nvidia, Microsoft, and AWS to deploy AI on classified networks</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🌍 TechCrunch</span>
+            <a href="https://techcrunch.com/2026/04/30/chatgpt-images-2-0-is-a-hit-in-india-but-not-a-big-winner-elsewhere-yet/" target="_blank" rel="noopener" class="news-title">ChatGPT Images 2.0 is a hit in India, but not a big winner elsewhere, yet</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🌍 TechCrunch</span>
+            <a href="https://techcrunch.com/2026/04/30/anthropic-potential-900b-valuation-round-could-happen-within-two-weeks/" target="_blank" rel="noopener" class="news-title">Sources: Anthropic potential $900B+ valuation round could happen within 2 weeks</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🌍 TechCrunch</span>
+            <a href="https://techcrunch.com/2026/04/30/apple-was-surprised-by-ai-driven-demand-for-macs/" target="_blank" rel="noopener" class="news-title">Apple was surprised by AI-driven demand for Macs</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🌍 TechCrunch</span>
+            <a href="https://techcrunch.com/2026/04/30/legal-ai-startup-legora-hits-5-6-valuation-and-its-battle-with-harvey-just-got-hotter/" target="_blank" rel="noopener" class="news-title">Legal AI startup Legora hits $5.6B valuation and its battle with Harvey just got hotter</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🌍 TechCrunch</span>
+            <a href="https://techcrunch.com/2026/04/30/after-dissing-anthropic-for-limiting-mythos-openai-restricts-access-to-cyber-too/" target="_blank" rel="noopener" class="news-title">After dissing Anthropic for limiting Mythos, OpenAI restricts access to Cyber, too</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🌍 TechCrunch</span>
+            <a href="https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/" target="_blank" rel="noopener" class="news-title">OpenAI announces new advanced security for ChatGPT accounts, including a partnership with Yubico</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🌍 TechCrunch</span>
+            <a href="https://techcrunch.com/2026/04/30/elon-musk-testifies-that-xai-trained-grok-on-openai-models/" target="_blank" rel="noopener" class="news-title">Elon Musk testifies that xAI trained Grok on OpenAI models</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🌍 Hacker News</span>
+            <a href="https://www.wired.com/story/when-robots-have-their-chatgpt-moment-remember-these-pincers/" target="_blank" rel="noopener" class="news-title">Eka’s robotic claw feels like we're approaching a ChatGPT moment</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🌍 Hacker News</span>
+            <a href="https://github.com/intel/auto-round" target="_blank" rel="noopener" class="news-title">Advanced Quantization Algorithm for LLMs</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🌍 Hacker News</span>
+            <a href="https://www.bbc.com/news/articles/c5yerr4m1yno" target="_blank" rel="noopener" class="news-title">Spotify adds 'Verified' badges to distinguish human artists from AI</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🌍 Hacker News</span>
+            <a href="https://californiawaterblog.com/2026/04/26/ai-water-use-distractions-and-lessons-for-california/" target="_blank" rel="noopener" class="news-title">AI uses less water than the public thinks</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🌍 Hacker News</span>
+            <a href="https://fusion.adam.new/install" target="_blank" rel="noopener" class="news-title">Show HN: AI CAD Harness</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🌍 Hacker News</span>
+            <a href="https://github.com/lahfir/agent-desktop" target="_blank" rel="noopener" class="news-title">Show HN: Agent-desktop – Native desktop automation CLI for AI agents</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🌍 Hacker News</span>
+            <a href="https://github.com/InsaneInfinity/Balistic" target="_blank" rel="noopener" class="news-title">Open source ballistic simulator with NASA SRTM terrain masking (Python/C#)</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🌍 Hacker News</span>
+            <a href="https://www.theregister.com/2026/05/02/ncsc_brace_for_patch_tsunami/" target="_blank" rel="noopener" class="news-title">Brace for the patch tsunami: AI is unearthing decades of buried code debt</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🌍 Hacker News</span>
+            <a href="https://copilot.simplepdf.com/?share=a7d00ad073c75a75d493228e6ff7b11eb3f2d945b6175913e87898ec96ca8076&form=w9&lang=en" target="_blank" rel="noopener" class="news-title">Show HN: Filling PDF forms with AI using client-side tool calling</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🌍 Hacker News</span>
+            <a href="https://thewalrus.ca/the-ai-race-is-charged-by-the-fear-of-being-left-behind/" target="_blank" rel="noopener" class="news-title">The AI Race Is Charged by the Fear of Being Left Behind</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">🌍 Hacker News</span>
+            <a href="https://mljar.com/" target="_blank" rel="noopener" class="news-title">Show HN: Mljar Studio – local AI data analyst that saves analysis as notebooks</a>
+        </div>
+    </section>
+    <section>
+        <h2 class="section-title">今日论文推荐</h2>
+        
+        <div class="news-card">
+            <span class="source-badge">📄 ArXiv</span>
+            <a href="https://arxiv.org/abs/2604.28178" target="_blank" rel="noopener" class="news-title">LLM as Clinical Graph Structure Refiner: Enhancing Representation Learning in EEG Seizure Diagnosis</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">📄 ArXiv</span>
+            <a href="https://arxiv.org/abs/2604.28093" target="_blank" rel="noopener" class="news-title">What Makes a Good Terminal-Agent Benchmark Task: A Guideline for Adversarial, Difficult, and Legible Evaluation Design</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">📄 ArXiv</span>
+            <a href="https://arxiv.org/abs/2604.28056" target="_blank" rel="noopener" class="news-title">RHyVE: Competence-Aware Verification and Phase-Aware Deployment for LLM-Generated Reward Hypotheses</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">📄 ArXiv</span>
+            <a href="https://arxiv.org/abs/2604.28049" target="_blank" rel="noopener" class="news-title">Agent-Agnostic Evaluation of SQL Accuracy in Production Text-to-SQL Systems</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">📄 ArXiv</span>
+            <a href="https://arxiv.org/abs/2604.28043" target="_blank" rel="noopener" class="news-title">Collaborative Agent Reasoning Engineering (CARE): A Three-Party Design Methodology for Systematically Engineering AI Agents with Subject Matter Experts, Developers, and Helper Agents</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">📄 ArXiv</span>
+            <a href="https://arxiv.org/abs/2604.28001" target="_blank" rel="noopener" class="news-title">A Pattern Language for Resilient Visual Agents</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">📄 ArXiv</span>
+            <a href="https://arxiv.org/abs/2604.27996" target="_blank" rel="noopener" class="news-title">Exploring Interaction Paradigms for LLM Agents in Scientific Visualization</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">📄 ArXiv</span>
+            <a href="https://arxiv.org/abs/2604.27972" target="_blank" rel="noopener" class="news-title">From LLM-Driven Trading Card Generation to Procedural Relatedness: A Pokémon Case Study</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">📄 ArXiv</span>
+            <a href="https://arxiv.org/abs/2604.27960" target="_blank" rel="noopener" class="news-title">LLMs as ASP Programmers: Self-Correction Enables Task-Agnostic Nonmonotonic Reasoning</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">📄 ArXiv</span>
+            <a href="https://arxiv.org/abs/2604.27955" target="_blank" rel="noopener" class="news-title">GUI Agents with Reinforcement Learning: Toward Digital Inhabitants</a>
+        </div>
+    </section>
 
-    <section><h2>📄 今日论文推荐</h2>
-<div class="news-item"><span class="badge">ArXiv</span> <a href="https://arxiv.org/abs/2604.28093" target="_blank" rel="noopener">What Makes a Good Terminal-Agent Benchmark Task</a><p class="summary">终端 AI Agent 基准设计指南。</p></div>
-<div class="news-item"><span class="badge">ArXiv</span> <a href="https://arxiv.org/abs/2604.28043" target="_blank" rel="noopener">CARE: Collaborative Agent Reasoning Engineering</a><p class="summary">三方协作方法论设计 AI Agent。</p></div>
-<div class="news-item"><span class="badge">ArXiv</span> <a href="https://arxiv.org/abs/2604.28001" target="_blank" rel="noopener">A Pattern Language for Resilient Visual Agents</a><p class="summary">鲁棒视觉 Agent 的设计模式语言。</p></div>
-<div class="news-item"><span class="badge">ArXiv</span> <a href="https://arxiv.org/abs/2604.27960" target="_blank" rel="noopener">LLMs as ASP Programmers: Self-Correction for Nonmonotonic Reasoning</a><p class="summary">LLM 自我纠错实现非单调推理。</p></div>
-<div class="news-item"><span class="badge">ArXiv</span> <a href="https://arxiv.org/abs/2604.27996" target="_blank" rel="noopener">Exploring LLM Agents in Scientific Visualization</a><p class="summary">LLM Agent 在科学可视化中的交互范式。</p></div>
-</section>
-
-  <div class="archives"><h3>📚 历史归档</h3>
-<a href="2026-05-01.html" class="archive-link">📅 2026-05-01 (26条)</a>
-<a href="2026-04-30.html" class="archive-link">📅 2026-04-30 (16条)</a>
-<a href="2026-04-29.html" class="archive-link">📅 2026-04-29 (26条)</a>
-</div>
-
-  <footer>数据源自实时采集 · 仅供参考 · <a href="https://github.com/leach-chen/ai-news-daily" style="color:var(--accent)">GitHub</a></footer>
+    <footer>
+        <p>💡 数据来源实时采集，仅供参考</p>
+        <p style="margin-top:8px">
+            <a href="https://ikongsir.github.io/ai-news-daily/">📖 访问完整网站</a>
+        </p>
+        <p style="margin-top:4px">由 Hermes Agent 自动生成</p>
+    </footer>
 </div>
 </body>
 </html>
