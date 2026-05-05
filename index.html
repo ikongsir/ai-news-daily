@@ -3,92 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI 资讯日报 - 2026-05-03</title>
+<title>AI 资讯日报</title>
 <style>
-  :root {
-    --bg: #0d1117;
-    --card: #161b22;
-    --border: #30363d;
-    --text: #e6edf3;
-    --text-dim: #8b949e;
-    --accent: #58a6ff;
-    --green: #3fb950;
-    --orange: #d29922;
-  }
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --dim: #8b949e; --accent: #58a6ff; --green: #3fb950; --orange: #d29922; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: var(--bg); color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.6; padding: 20px;
-  }
-  .container { max-width: 860px; margin: 0 auto; }
-  header {
-    text-align: center; padding: 40px 0 30px;
-    border-bottom: 1px solid var(--border); margin-bottom: 30px;
-  }
-  header h1 { font-size: 1.8em; margin-bottom: 8px; }
-  header .subtitle { color: var(--text-dim); font-size: 0.9em; }
-  header .subtitle a { color: var(--accent); text-decoration: none; }
-  section { margin-bottom: 28px; }
-  h2 { font-size: 1.15em; color: var(--accent); margin-bottom: 14px;
-         padding-bottom: 6px; border-bottom: 1px solid var(--border); }
-  .news-item {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 8px; padding: 12px 16px; margin-bottom: 8px;
-    transition: border-color 0.2s;
-  }
-  .news-item:hover { border-color: var(--accent); }
-  .badge {
-    display: inline-block; font-size: 0.75em; padding: 2px 8px;
-    border-radius: 10px; background: #1f2937; color: var(--green);
-    margin-right: 8px; vertical-align: middle;
-  }
-  .news-item a {
-    color: var(--text); text-decoration: none; font-size: 0.95em;
-  }
-  .news-item a:hover { color: var(--accent); }
-  .summary {
-    color: var(--text-dim); font-size: 0.85em; margin-top: 4px;
-    line-height: 1.5;
-  }
-  .archives {
-    margin-top: 30px; padding: 16px; background: var(--card);
-    border: 1px solid var(--border); border-radius: 8px;
-  }
-  .archives h3 { font-size: 0.95em; margin-bottom: 10px; color: var(--text-dim); }
-  .archive-link {
-    display: inline-block; margin: 3px 6px 3px 0; padding: 4px 10px;
-    background: #1f2937; border-radius: 6px; color: var(--accent);
-    text-decoration: none; font-size: 0.85em;
-  }
-  .archive-link:hover { background: var(--accent); color: var(--bg); }
-  .empty { color: var(--text-dim); font-size: 0.9em; }
-  footer {
-    text-align: center; color: var(--text-dim); font-size: 0.8em;
-    padding: 30px 0; border-top: 1px solid var(--border); margin-top: 40px;
-  }
-  @media (max-width: 600px) {
-    body { padding: 12px; }
-    header h1 { font-size: 1.4em; }
-    .news-item { padding: 10px 12px; }
-  }
+  body { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans SC',sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+  .container { max-width: 720px; margin: 0 auto; padding: 40px 20px; text-align: center; }
+  header { padding: 60px 0 40px; }
+  header h1 { font-size: 2.5em; background: linear-gradient(135deg, var(--accent), var(--green)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  header p { color: var(--dim); margin-top: 12px; font-size: 1.1em; }
+  .latest { background: var(--card); border: 1px solid var(--accent); border-radius: 12px; padding: 30px; margin-bottom: 30px; }
+  .latest h2 { font-size: 1.3em; margin-bottom: 16px; color: var(--accent); }
+  .latest .btn { display: inline-block; padding: 12px 32px; background: var(--accent); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1em; }
+  .latest .btn:hover { opacity: 0.85; }
+  .archive-section { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 30px; }
+  .archive-section h2 { font-size: 1.2em; margin-bottom: 16px; }
+  .archive-grid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+  .archive-grid a { display: inline-block; padding: 8px 16px; background: #21262d; border: 1px solid var(--border); border-radius: 8px; color: var(--text); text-decoration: none; font-size: 0.9em; }
+  .archive-grid a:hover { border-color: var(--accent); color: var(--accent); background: #1f6feb22; }
+  .footer { margin-top: 40px; color: var(--dim); font-size: 0.85em; }
 </style>
 </head>
 <body>
 <div class="container">
   <header>
     <h1>📡 AI 资讯日报</h1>
-    <div class="subtitle">2026-05-03 · <a href="https://github.com/leach-chen/ai-news-daily" target="_blank">自动采集</a> · 国内 9 条 / 国际 6 条 / 论文 1 篇</div>
+    <p>每天自动收集国内外最新 AI 技术动态</p>
   </header>
-  <section><h2>🇨🇳 国内动态</h2><div class="news-item"><span class="badge">机器之心</span> <span>机器之心暂无内容</span></div><div class="news-item"><span class="badge">量子位</span> <a href="https://www.qbitai.com" target="_blank" rel="noopener">量子位暂无内容</a></div><div class="news-item"><span class="badge">36氪 AI</span> <a href="https://36kr.com/p/3793138446179585" target="_blank" rel="noopener">CTO不香了？百亿公司高管们为何集体转身，去Anthropic当工程师</a></div><div class="news-item"><span class="badge">36氪 AI</span> <a href="https://36kr.com/p/3793138446179585" target="_blank" rel="noopener">谁距离一线模型更近，谁就拥有更多更大的权力？</a></div><div class="news-item"><span class="badge">36氪 AI</span> <a href="https://36kr.com/p/3793050208984071" target="_blank" rel="noopener">AI 大模型的「中文税」：中文比英文更费 Token，为什么？</a></div><div class="news-item"><span class="badge">36氪 AI</span> <a href="https://36kr.com/p/3793050208984071" target="_blank" rel="noopener">模型不是中性的，它内置了语言偏好。</a></div><div class="news-item"><span class="badge">36氪 AI</span> <a href="https://36kr.com/p/3792852142923008" target="_blank" rel="noopener">假期出游，我被AI坑惨了</a></div><div class="news-item"><span class="badge">雷锋网</span> <span>雷锋网暂无最新AI内容</span></div><div class="news-item"><span class="badge">新智元</span> <span>[采集失败] HTTPSConnectionPool(host=&#x27;rsshub.app&#x27;, port=443): Max retries exceeded with url: /zhihu/people/ea5c65d18c9da59cc0f2a36bcf316704 (Caused by ConnectTimeoutError(&lt;HTTPSConnection(host=&#x27;rsshub.app&#x27;, port=443) at 0x10b7ccd50&gt;, &#x27;Connection to rsshub.app timed out. (connect timeout=15)&#x27;))</span></div></section>
-  <section><h2>🌍 国际动态</h2><div class="news-item"><span class="badge">HN</span> <span>[采集失败] HTTPSConnectionPool(host=&#x27;hacker-news.firebaseio.com&#x27;, port=443): Read timed out. (read timeout=15)</span></div><div class="news-item"><span class="badge">Google AI Blog</span> <span>[采集失败] HTTPSConnectionPool(host=&#x27;ai.googleblog.com&#x27;, port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, &#x27;[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)&#x27;)))</span></div><div class="news-item"><span class="badge">TechCrunch AI</span> <a href="https://techcrunch.com/2026/05/02/ai-generated-actors-and-scripts-are-now-ineligible-for-oscars/" target="_blank" rel="noopener">AI-generated actors and scripts are now ineligible for Oscars</a><p class="summary">Bad news for Tilly Norwood.</p></div><div class="news-item"><span class="badge">TechCrunch AI</span> <a href="https://techcrunch.com/2026/05/02/the-best-ai-powered-dictation-apps-of-2025/" target="_blank" rel="noopener">The best AI dictation apps, tested and ranked</a><p class="summary">AI-powered dictation apps are useful for replying to emails, taking notes, and even coding through your voice</p></div><div class="news-item"><span class="badge">TechCrunch AI</span> <a href="https://techcrunch.com/2026/05/01/replits-amjad-masad-on-the-cursor-deal-fighting-apple-and-why-hed-rather-not-sell/" target="_blank" rel="noopener">Replit’s Amjad Masad on the Cursor deal, fighting Apple, and why he’d rather not sell</a><p class="summary">At TechCrunch&#x27;s sold-out StrictlyVC event in San Francisco on Thursday night, we covered a lot of ground in a short time, beginning with the question everyone in the industry is asking right now: in a</p></div><div class="news-item"><span class="badge">Meta AI Blog</span> <span>[采集失败] HTTPSConnectionPool(host=&#x27;ai.meta.com&#x27;, port=443): Max retries exceeded with url: /blog/ (Caused by ConnectTimeoutError(&lt;HTTPSConnection(host=&#x27;ai.meta.com&#x27;, port=443) at 0x10b7aefd0&gt;, &#x27;Connection to ai.meta.com timed out. (connect timeout=15)&#x27;))</span></div></section>
-  <section><h2>📄 今日论文推荐</h2><div class="news-item"><span class="badge">HF Papers</span> <span>[采集失败] HTTPSConnectionPool(host=&#x27;huggingface.co&#x27;, port=443): Max retries exceeded with url: /api/daily_papers?limit=5 (Caused by ConnectTimeoutError(&lt;HTTPSConnection(host=&#x27;huggingface.co&#x27;, port=443) at 0x10b7bf390&gt;, &#x27;Connection to huggingface.co timed out. (connect timeout=15)&#x27;))</span></div></section>
-  <div class="archives"><h3>📚 历史归档</h3><a href="2026-05-02.html" class="archive-link">📅 2026-05-02 (28条)</a>
-<a href="2026-05-01.html" class="archive-link">📅 2026-05-01 (26条)</a>
-<a href="2026-04-30.html" class="archive-link">📅 2026-04-30 (16条)</a>
-<a href="2026-04-29.html" class="archive-link">📅 2026-04-29 (26条)</a>
-</div>
-  <footer>数据源自实时采集 · 仅供参考 · <a href="https://github.com/leach-chen/ai-news-daily" style="color:var(--accent)">GitHub</a></footer>
+
+  <div class="latest">
+    <h2>📰 最新一期</h2>
+    <p style="color: var(--dim); margin-bottom: 20px;">2026 年 5 月 5 日 · 共 23 条资讯</p>
+    <a href="2026-05-05.html" class="btn">📖 阅读今日简报</a>
+  </div>
+
+  <div class="archive-section">
+    <h2>📚 历史存档</h2>
+    <div class="archive-grid">
+      <a href="2026-05-05.html">2026-05-05</a>
+      <a href="2026-05-03.html">2026-05-03</a>
+      <a href="2026-05-02.html">2026-05-02</a>
+      <a href="2026-05-01.html">2026-05-01</a>
+      <a href="2026-04-30.html">2026-04-30</a>
+      <a href="2026-04-29.html">2026-04-29</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>GitHub: <a href="https://github.com/ikongsir/ai-news-daily" style="color: var(--accent);">ikongsir/ai-news-daily</a></p>
+    <p style="margin-top:4px">💡 数据来源实时采集，仅供参考</p>
+  </div>
 </div>
 </body>
 </html>
