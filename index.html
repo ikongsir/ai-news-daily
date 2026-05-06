@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI 资讯日报 | 2026-05-06</title>
 <style>
-:root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #c9d1d9; --muted: #8b949e; --accent: #58a6ff; --green: #3fb950; --orange: #d29922; }
+:root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #c9d1d9; --muted: #8b949e; --accent: #58a6ff; }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
 .container { max-width: 800px; margin: 0 auto; padding: 20px; }
@@ -22,7 +22,7 @@ h1 { font-size: 1.8em; font-weight: 700; }
 .news-card a:hover { color: var(--accent); }
 .source-badge { background: #1f2937; color: var(--accent); font-size: 0.75em; padding: 2px 8px; border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-top: 1px; }
 .paper-icon { flex-shrink: 0; }
-.archives { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); }
+.archives { margin-top: 40px; padding-top: 20px; border-bottom: 1px solid var(--border); }
 .archives-title { font-size: 1em; color: var(--muted); margin-bottom: 10px; }
 .archives a { display: inline-block; color: var(--accent); text-decoration: none; font-size: 0.85em; margin: 0 8px 8px 0; padding: 2px 10px; background: var(--card); border: 1px solid var(--border); border-radius: 4px; }
 .archives a:hover { border-color: var(--accent); }
@@ -34,29 +34,27 @@ footer { text-align: center; padding: 30px 0; color: var(--muted); font-size: 0.
 <header>
 <h1>📡 AI 资讯日报</h1>
 <div class="date">2026-05-06</div>
-<div class="stats">共 15 条资讯 | 国内 3 条 · 国际 7 条 · 论文 5 篇</div>
+<div class="stats">共 16 条资讯 | 国内 3 条 · 国际 8 条 · 论文 5 篇</div>
 </header>
-
 <div class="section">
 <div class="section-title">🇨🇳 国内动态 <span class="count">3</span></div>
         <div class="news-card">
-            <span class="source-badge">36氪</span>
-            <a href="https://36kr.com/p/3796053787663368" target="_blank" rel="noopener">90后哈工大团队造人形机器人“夸父”，冲刺IPO</a>
+            <span class="source-badge">36氪 AI</span>
+            <a href="https://36kr.com/p/3796053787663368" target="_blank" rel="noopener">哈工大同学要去敲钟了</a>
         </div>
         <div class="news-card">
-            <span class="source-badge">36氪</span>
+            <span class="source-badge">36氪 AI</span>
             <a href="https://36kr.com/p/3795874564250627" target="_blank" rel="noopener">大型挂机现场：马斯克的55万英伟达GPU，利用率才11%</a>
         </div>
         <div class="news-card">
-            <span class="source-badge">36氪</span>
+            <span class="source-badge">36氪 AI</span>
             <a href="https://36kr.com/p/3795876358347782" target="_blank" rel="noopener">全球第二的机器狗公司，讲了一个不性感的故事</a>
         </div>
 </div>
-
 <div class="section">
-<div class="section-title">🌍 国际动态 <span class="count">7</span></div>
+<div class="section-title">🌍 国际动态 <span class="count">8</span></div>
         <div class="news-card">
-            <span class="source-badge">Google</span>
+            <span class="source-badge">HN</span>
             <a href="https://blog.google/innovation-and-ai/technology/developers-tools/multi-token-prediction-gemma-4/" target="_blank" rel="noopener">Accelerating Gemma 4: faster inference with multi-token prediction drafters</a>
         </div>
         <div class="news-card">
@@ -65,56 +63,57 @@ footer { text-align: center; padding: 30px 0; color: var(--muted); font-size: 0.
         </div>
         <div class="news-card">
             <span class="source-badge">HN</span>
+            <a href="https://paletteinspiration.com/" target="_blank" rel="noopener">Show HN: Explore color palettes inspired by 3000 master painter artworks</a>
+        </div>
+        <div class="news-card">
+            <span class="source-badge">HN</span>
             <a href="https://arxiv.org/abs/2604.26752" target="_blank" rel="noopener">GLM-5V-Turbo: Toward a Native Foundation Model for Multimodal Agents</a>
         </div>
         <div class="news-card">
-            <span class="source-badge">Anthropic</span>
+            <span class="source-badge">HN</span>
             <a href="https://www.anthropic.com/news/finance-agents" target="_blank" rel="noopener">Agents for financial services and insurance</a>
         </div>
         <div class="news-card">
-            <span class="source-badge">TechCrunch</span>
+            <span class="source-badge">TechCrunch AI</span>
             <a href="https://techcrunch.com/2026/05/05/sap-bets-1-16b-on-18-month-old-german-ai-lab-and-says-yes-to-nemoclaw/" target="_blank" rel="noopener">SAP bets $1.16B on 18-month-old German AI lab and says yes to NemoClaw</a>
         </div>
         <div class="news-card">
-            <span class="source-badge">TechCrunch</span>
-            <a href="https://techcrunch.com/2026/05/05/altara-secures-7m-to-bridge-the-data-gap-thats-slowing-down-physical-sciences/" target="_blank" rel="noopener">Altara secures $7M to bridge the data gap slowing down physical sciences</a>
+            <span class="source-badge">TechCrunch AI</span>
+            <a href="https://techcrunch.com/2026/05/05/altara-secures-7m-to-bridge-the-data-gap-thats-slowing-down-physical-sciences/" target="_blank" rel="noopener">Altara secures $7M to bridge the data gap that’s slowing down physical sciences</a>
         </div>
         <div class="news-card">
-            <span class="source-badge">TechCrunch</span>
+            <span class="source-badge">TechCrunch AI</span>
             <a href="https://techcrunch.com/2026/05/05/apple-plans-to-make-ios-27-a-choose-your-own-adventure-of-ai-models/" target="_blank" rel="noopener">Apple plans to make iOS 27 a Choose Your Own Adventure of AI models</a>
         </div>
 </div>
-
 <div class="section">
 <div class="section-title">📚 今日论文推荐 <span class="count">5</span></div>
-        <div class="news-card paper">
+        <div class="news-card">
             <span class="paper-icon">📄</span>
-            <a href="https://arxiv.org/abs/2605.00060" target="_blank" rel="noopener">TADI: Tool-Augmented Drilling Intelligence via Agentic LLM Orchestration</a>
+            <a href="https://arxiv.org/abs/2605.00060" target="_blank" rel="noopener">TADI: Tool-Augmented Drilling Intelligence via Agentic LLM Orchestration over Heterogeneous Wellsite Data</a>
         </div>
-        <div class="news-card paper">
+        <div class="news-card">
             <span class="paper-icon">📄</span>
             <a href="https://arxiv.org/abs/2605.00073" target="_blank" rel="noopener">AgentReputation: A Decentralized Agentic AI Reputation Framework</a>
         </div>
-        <div class="news-card paper">
+        <div class="news-card">
             <span class="paper-icon">📄</span>
-            <a href="https://arxiv.org/abs/2605.00123" target="_blank" rel="noopener">Minimal, Local, Causal Explanations for Jailbreak Success in LLMs</a>
+            <a href="https://arxiv.org/abs/2605.00123" target="_blank" rel="noopener">Minimal, Local, Causal Explanations for Jailbreak Success in Large Language Models</a>
         </div>
-        <div class="news-card paper">
+        <div class="news-card">
             <span class="paper-icon">📄</span>
             <a href="https://arxiv.org/abs/2605.00136" target="_blank" rel="noopener">Are Tools All We Need? Unveiling the Tool-Use Tax in LLM Agents</a>
         </div>
-        <div class="news-card paper">
+        <div class="news-card">
             <span class="paper-icon">📄</span>
             <a href="https://arxiv.org/abs/2605.00224" target="_blank" rel="noopener">TUR-DPO: Topology- and Uncertainty-Aware Direct Preference Optimization</a>
         </div>
 </div>
-
 <div class="archives">
 <div class="archives-title">📅 历史归档</div><a href="2026-05-06.html">2026-05-06</a>
 <a href="2026-05-05.html">2026-05-05</a>
 
 </div>
-
 <footer>💡 数据来源实时采集，仅供参考 · AI 资讯日报</footer>
 </div>
 </body>
