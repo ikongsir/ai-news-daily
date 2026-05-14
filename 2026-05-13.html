@@ -48,51 +48,308 @@
   }
   .news-item a:hover { color: var(--accent); }
   .summary {
-    color: var(--text-dim); font-size: 0.85em; margin-top: 4px;
-    line-height: 1.5;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 8px; padding: 14px 16px; margin-top: 20px;
+    color: var(--text-dim); font-size: 0.85em; line-height: 1.7;
   }
-  .archives {
-    margin-top: 30px; padding: 16px; background: var(--card);
-    border: 1px solid var(--border); border-radius: 8px;
-  }
-  .archives h3 { font-size: 0.95em; margin-bottom: 10px; color: var(--text-dim); }
-  .archive-link {
-    display: inline-block; margin: 3px 6px 3px 0; padding: 4px 10px;
-    background: #1f2937; border-radius: 6px; color: var(--accent);
-    text-decoration: none; font-size: 0.85em;
-  }
-  .archive-link:hover { background: var(--accent); color: var(--bg); }
-  .empty { color: var(--text-dim); font-size: 0.9em; }
   footer {
-    text-align: center; color: var(--text-dim); font-size: 0.8em;
-    padding: 30px 0; border-top: 1px solid var(--border); margin-top: 40px;
+    text-align: center; padding: 30px 0 20px;
+    border-top: 1px solid var(--border); margin-top: 30px;
+    color: var(--text-dim); font-size: 0.8em;
   }
-  @media (max-width: 600px) {
-    body { padding: 12px; }
+  .archive { margin-top: 30px; }
+  .archive h3 { font-size: 1em; color: var(--text-dim); margin-bottom: 10px; }
+  .archive-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .archive-links a {
+    color: var(--accent); text-decoration: none; font-size: 0.85em;
+    padding: 4px 10px; border: 1px solid var(--border); border-radius: 6px;
+    transition: border-color 0.2s;
+  }
+  .archive-links a:hover { border-color: var(--accent); }
+  @media (max-width: 640px) {
+    body { padding: 10px; }
     header h1 { font-size: 1.4em; }
-    .news-item { padding: 10px 12px; }
+    .news-item a { font-size: 0.88em; }
   }
 </style>
 </head>
 <body>
-<div class="container">
-  <header>
-    <h1>📡 AI 资讯日报</h1>
-    <div class="subtitle">2026-05-13 · <a href="https://github.com/leach-chen/ai-news-daily" target="_blank">自动采集</a> · 国内 9 条 / 国际 7 条 / 论文 2 篇</div>
-  </header>
-  <section><h2>🇨🇳 国内动态</h2><div class="news-item"><span class="badge">机器之心</span> <span>机器之心暂无内容</span></div><div class="news-item"><span class="badge">量子位</span> <a href="https://www.qbitai.com" target="_blank" rel="noopener">量子位暂无内容</a></div><div class="news-item"><span class="badge">36氪 AI</span> <a href="https://36kr.com/p/3806243456425733" target="_blank" rel="noopener">绝杀，OpenAI正式接管人类耳朵，首个GPT-5级推理音频模型来了</a></div><div class="news-item"><span class="badge">36氪 AI</span> <a href="https://36kr.com/p/3806243456425733" target="_blank" rel="noopener">OpenAI推出GPT-Realtime-2，首个GPT-5级推理音频模型</a></div><div class="news-item"><span class="badge">36氪 AI</span> <a href="https://36kr.com/p/3806253802528518" target="_blank" rel="noopener">商家讨好AI的时代，要来了</a></div><div class="news-item"><span class="badge">36氪 AI</span> <a href="https://36kr.com/p/3806253802528518" target="_blank" rel="noopener">营销人要有新工作了</a></div><div class="news-item"><span class="badge">36氪 AI</span> <a href="https://36kr.com/p/3806243962511109" target="_blank" rel="noopener">AI拿婚外情写勒索邮件，查一年告诉我科幻小说教坏的</a></div><div class="news-item"><span class="badge">雷锋网</span> <span>雷锋网暂无最新AI内容</span></div><div class="news-item"><span class="badge">新智元</span> <span>[采集失败] HTTPSConnectionPool(host=&#x27;rsshub.app&#x27;, port=443): Max retries exceeded with url: /zhihu/people/ea5c65d18c9da59cc0f2a36bcf316704 (Caused by SSLError(SSLEOFError(8, &#x27;EOF occurred in violation of protocol (_ssl.c:997)&#x27;)))</span></div></section>
-  <section><h2>🌍 国际动态</h2><div class="news-item"><span class="badge">HN</span> <span>[采集失败] HTTPSConnectionPool(host=&#x27;hacker-news.firebaseio.com&#x27;, port=443): Max retries exceeded with url: /v0/topstories.json (Caused by SSLError(SSLEOFError(8, &#x27;EOF occurred in violation of protocol (_ssl.c:997)&#x27;)))</span></div><div class="news-item"><span class="badge">OpenAI Blog</span> <span>[采集失败] HTTPSConnectionPool(host=&#x27;openai.com&#x27;, port=443): Max retries exceeded with url: /blog/feed.xml (Caused by SSLError(SSLEOFError(8, &#x27;EOF occurred in violation of protocol (_ssl.c:997)&#x27;)))</span></div><div class="news-item"><span class="badge">Anthropic Blog</span> <span>[采集失败] HTTPSConnectionPool(host=&#x27;www.anthropic.com&#x27;, port=443): Max retries exceeded with url: /feed.xml (Caused by SSLError(SSLEOFError(8, &#x27;EOF occurred in violation of protocol (_ssl.c:997)&#x27;)))</span></div><div class="news-item"><span class="badge">Google AI Blog</span> <span>[采集失败] HTTPSConnectionPool(host=&#x27;ai.googleblog.com&#x27;, port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, &#x27;EOF occurred in violation of protocol (_ssl.c:997)&#x27;)))</span></div><div class="news-item"><span class="badge">The Verge AI</span> <span>[采集失败] HTTPSConnectionPool(host=&#x27;www.theverge.com&#x27;, port=443): Max retries exceeded with url: /ai-artificial-intelligence/rss.xml (Caused by SSLError(SSLEOFError(8, &#x27;EOF occurred in violation of protocol (_ssl.c:997)&#x27;)))</span></div><div class="news-item"><span class="badge">TechCrunch AI</span> <span>[采集失败] HTTPSConnectionPool(host=&#x27;techcrunch.com&#x27;, port=443): Max retries exceeded with url: /category/artificial-intelligence/feed/ (Caused by SSLError(SSLEOFError(8, &#x27;EOF occurred in violation of protocol (_ssl.c:997)&#x27;)))</span></div><div class="news-item"><span class="badge">Meta AI Blog</span> <span>[采集失败] HTTPSConnectionPool(host=&#x27;ai.meta.com&#x27;, port=443): Max retries exceeded with url: /blog/ (Caused by SSLError(SSLEOFError(8, &#x27;EOF occurred in violation of protocol (_ssl.c:997)&#x27;)))</span></div></section>
-  <section><h2>📄 今日论文推荐</h2><div class="news-item"><span class="badge">HF Papers</span> <span>[采集失败] HTTPSConnectionPool(host=&#x27;huggingface.co&#x27;, port=443): Max retries exceeded with url: /api/daily_papers?limit=5 (Caused by SSLError(SSLEOFError(8, &#x27;EOF occurred in violation of protocol (_ssl.c:997)&#x27;)))</span></div><div class="news-item"><span class="badge">ArXiv</span> <span>[采集失败] HTTPSConnectionPool(host=&#x27;rss.arxiv.org&#x27;, port=443): Max retries exceeded with url: /rss/cs.AI (Caused by SSLError(SSLEOFError(8, &#x27;EOF occurred in violation of protocol (_ssl.c:997)&#x27;)))</span></div></section>
-  <div class="archives"><h3>📚 历史归档</h3><a href="2026-05-12.html" class="archive-link">📅 2026-05-12 (30条)</a>
-<a href="2026-05-11.html" class="archive-link">📅 2026-05-11 (31条)</a>
-<a href="2026-05-10.html" class="archive-link">📅 2026-05-10 (25条)</a>
-<a href="2026-05-09.html" class="archive-link">📅 2026-05-09 (30条)</a>
-<a href="2026-05-08.html" class="archive-link">📅 2026-05-08 (24条)</a>
-<a href="2026-05-07.html" class="archive-link">📅 2026-05-07 (33条)</a>
-<a href="2026-05-06.html" class="archive-link">📅 2026-05-06 (16条)</a>
-<a href="2026-05-05.html" class="archive-link">📅 2026-05-05 (23条)</a>
-</div>
-  <footer>数据源自实时采集 · 仅供参考 · <a href="https://github.com/leach-chen/ai-news-daily" style="color:var(--accent)">GitHub</a></footer>
-</div>
+  <div class="container">
+    <header>
+      <h1>📡 AI 资讯日报</h1>
+      <div class="subtitle">2026-05-13 · <a href="index.html">返回首页</a></div>
+    </header>
+
+    <section>
+      <h2>━━━ 国内动态 ━━━</h2>
+      <div class="news-item">
+        <span class="badge">36氪 AI</span>
+        <a href="https://36kr.com/p/3807610197384968" target="_blank" rel="noopener">GPT-5.5全球首破，0源码盲写程序，编程AI进入新纪元</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">36氪 AI</span>
+        <a href="https://36kr.com/p/3807542838206208" target="_blank" rel="noopener">CoreWeave暴跌、Cerebras紧急IPO：OpenAI的“承诺”成了最危险的资产？</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">36氪 AI</span>
+        <a href="https://36kr.com/p/3807610387521289" target="_blank" rel="noopener">博士80小时熬夜改代码，Codex 2小时交卷，科研奇点来了</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>━━━ 国际动态 ━━━</h2>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/12/medicares-new-payment-model-is-built-for-ai-and-most-of-the-tech-world-has-no-idea/" target="_blank" rel="noopener">Medicare’s new payment model is built for AI, and most of the tech world has no idea</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/12/musk-mulled-handing-openai-to-his-children-altman-testifies/" target="_blank" rel="noopener">Musk mulled handing OpenAI to his children, Altman testifies</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/12/anthropic-warns-investors-against-secondary-platforms-offering-access-to-its-shares/" target="_blank" rel="noopener">Anthropic warns investors against secondary platforms offering access to its shares</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/12/report-google-and-spacex-in-talks-to-put-data-centers-into-orbit/" target="_blank" rel="noopener">Report: Google and SpaceX in talks to put data centers into orbit</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/12/everything-google-announced-at-its-android-show-from-googlebooks-to-vibe-coded-widgets/" target="_blank" rel="noopener">Everything Google announced at its Android Show, from Googlebooks to vibe-coded widgets</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/12/google-adds-gemini-powered-dictation-to-gboard-which-could-be-bad-news-for-dictation-startups/" target="_blank" rel="noopener">Google adds Gemini-powered dictation to Gboard, which could be bad news for dictation startups</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/12/the-ai-legal-services-industry-is-heating-up-anthropic-is-getting-in-on-the-action/" target="_blank" rel="noopener">The AI legal services industry is heating up — Anthropic is getting in on the action</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/12/google-brings-agentic-ai-and-vibe-coded-widgets-to-android/" target="_blank" rel="noopener">Google brings agentic AI and vibe-coded widgets to Android</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/12/googles-create-my-widget-feature-will-let-you-vibe-code-your-own-widgets/" target="_blank" rel="noopener">Google’s ‘Create My Widget’ feature will let you vibe-code your own widgets</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/12/threads-tests-a-meta-ai-integration-that-works-similarly-to-grok/" target="_blank" rel="noopener">Threads tests a Meta AI integration that works similarly to Grok</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/12/dessn-raises-6m-for-its-production-focused-design-tool/" target="_blank" rel="noopener">Dessn raises $6M for its production-focused design tool</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/12/vapi-hits-500m-valuation-as-amazon-ring-chose-its-ai-platform-over-40-rivals/" target="_blank" rel="noopener">AI voice startup Vapi hits $500M valuation after winning Amazon Ring over 40 rivals</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/11/thinking-machines-wants-to-build-an-ai-that-actually-listens-while-it-talks/" target="_blank" rel="noopener">Thinking Machines wants to build an AI that actually listens while it talks</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/11/riding-an-ai-rally-robinhood-preps-second-retail-venture-ipo/" target="_blank" rel="noopener">Riding an AI rally, Robinhood preps second retail venture IPO</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/11/gm-just-laid-off-hundreds-of-it-workers-to-hire-those-with-stronger-ai-skills/" target="_blank" rel="noopener">GM just laid off hundreds of IT workers to hire those with stronger AI skills</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/11/digg-tries-again-this-time-as-an-ai-news-aggregator/" target="_blank" rel="noopener">Digg tries again, this time as an AI news aggregator</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/11/there-arent-enough-rockets-for-space-data-centers-cowboy-space-raised-275-million-to-build-them/" target="_blank" rel="noopener">There aren’t enough rockets for space data centers — Cowboy Space raised $275M to build them</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/10/get-ready-for-the-whisper-filled-office-of-the-future/" target="_blank" rel="noopener">Get ready for the whisper-filled office of the future</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/10/anthropic-says-evil-portrayals-of-ai-were-responsible-for-claudes-blackmail-attempts/" target="_blank" rel="noopener">Anthropic says ‘evil’ portrayals of AI were responsible for Claude’s blackmail attempts</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/10/were-feeling-cynical-about-xais-big-deal-with-anthropic/" target="_blank" rel="noopener">We’re feeling cynical about xAI’s big deal with Anthropic</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/09/voice-ai-in-india-is-hard-wispr-flow-is-betting-on-it-anyway/" target="_blank" rel="noopener">Voice AI in India is hard — Wispr Flow is betting on it anyway</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/09/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/" target="_blank" rel="noopener">So you’ve heard these AI terms and nodded along; let’s fix that</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/09/nvidia-has-already-committed-40b-to-equity-ai-deals-this-year/" target="_blank" rel="noopener">Nvidia has already committed $40B to equity AI deals this year</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/08/laid-off-oracle-workers-tried-to-negotiate-better-severance-oracle-said-no/" target="_blank" rel="noopener">Laid-off Oracle workers tried to negotiate better severance. Oracle said no.</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/08/intels-comeback-story-is-even-wilder-than-it-seems/" target="_blank" rel="noopener">Intel’s comeback story is even wilder than it seems</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/08/cloudflare-says-ai-made-1100-jobs-obsolete-even-as-revenue-hit-a-record-high/" target="_blank" rel="noopener">Cloudflare says AI made 1,100 jobs obsolete, even as revenue hit a record high</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/08/last-24-hours-to-get-50-off-a-second-pass-to-techcrunch-disrupt-2026/" target="_blank" rel="noopener">Last 24 hours to get 50% off a second pass to TechCrunch Disrupt 2026</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/07/the-back-office-problem-that-explains-why-specialists-never-call-you-back/" target="_blank" rel="noopener">The fax machine is the bottleneck in US healthcare, and VCs are starting to notice</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/07/openai-launches-new-voice-intelligence-features-in-its-api/" target="_blank" rel="noopener">OpenAI launches new voice intelligence features in its API</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/09/fintech-startup-parker-files-for-bankruptcy/" target="_blank" rel="noopener">Fintech startup Parker files for bankruptcy</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/08/san-franciscos-housing-market-has-lost-its-mind/" target="_blank" rel="noopener">San Francisco’s housing market has lost its mind</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/08/u-s-defense-contractor-who-sold-hacking-tools-to-russian-broker-ordered-to-pay-10-million-to-former-employers/" target="_blank" rel="noopener">US defense contractor who sold hacking tools to Russian broker ordered to pay $10M to former employers</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/07/hackers-deface-school-login-pages-after-claiming-another-instructure-hack/" target="_blank" rel="noopener">Hackers deface school login pages after claiming another Instructure hack</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/07/google-unveils-whoop-like-screenless-fitbit-air/" target="_blank" rel="noopener">Google unveils Whoop-like screenless Fitbit Air</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/06/five-architects-of-the-ai-economy-explain-where-the-wheels-are-coming-off/" target="_blank" rel="noopener">Five architects of the AI economy explain where the wheels are coming off</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/06/3-days-left-to-lock-in-50-off-a-second-ticket-to-techcrunch-disrupt-2026/" target="_blank" rel="noopener">TechCrunch Disrupt</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">Hacker News</span>
+        <a href="https://www.nair.sh/guides-and-opinions/communicating-your-expertise/why-senior-developers-fail-to-communicate-their-expertise" target="_blank" rel="noopener">[627↑] Why senior developers fail to communicate their expertise</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">Hacker News</span>
+        <a href="https://github.com/cactus-compute/needle" target="_blank" rel="noopener">[501↑] Show HN: Needle: We Distilled Gemini Tool Calling into a 26M Model</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">Hacker News</span>
+        <a href="https://deepmind.google/blog/ai-pointer/" target="_blank" rel="noopener">[219↑] Reimagining the mouse pointer for the AI era</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">Hacker News</span>
+        <a href="https://www.sciencedaily.com/releases/2026/05/260510030950.htm" target="_blank" rel="noopener">[97↑] New stainless steel can survive conditions for hydrogen production in seawater</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>━━━ 今日论文推荐 ━━━</h2>
+      <div class="news-item">
+        <span class="badge">ArXiv</span>
+        <a href="https://arxiv.org/abs/2605.12481" target="_blank" rel="noopener">ToolCUA: Towards Optimal GUI-Tool Path Orchestration for Computer Use Agents</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">ArXiv</span>
+        <a href="https://arxiv.org/abs/2605.12474" target="_blank" rel="noopener">Reward Hacking in Rubric-Based Reinforcement Learning</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">ArXiv</span>
+        <a href="https://arxiv.org/abs/2605.12421" target="_blank" rel="noopener">Formalize, Don't Optimize: The Heuristic Trap in LLM-Generated Combinatorial Solvers</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">ArXiv</span>
+        <a href="https://arxiv.org/abs/2605.12376" target="_blank" rel="noopener">ProfiliTable: Profiling-Driven Tabular Data Processing via Agentic Workflows</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">ArXiv</span>
+        <a href="https://arxiv.org/abs/2605.12357" target="_blank" rel="noopener">$δ$-mem: Efficient Online Memory for Large Language Models</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">ArXiv</span>
+        <a href="https://arxiv.org/abs/2605.12332" target="_blank" rel="noopener">Towards Automated Air Traffic Safety Assessment Around Non-Towered Airports Using Large Language Models</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">ArXiv</span>
+        <a href="https://arxiv.org/abs/2605.12294" target="_blank" rel="noopener">Executable Agentic Memory for GUI Agent</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">ArXiv</span>
+        <a href="https://arxiv.org/abs/2605.12265" target="_blank" rel="noopener">How Useful Is Cross-Domain Generalization for Training LLM Monitors?</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">ArXiv</span>
+        <a href="https://arxiv.org/abs/2605.12240" target="_blank" rel="noopener">No Action Without a NOD: A Heterogeneous Multi-Agent Architecture for Reliable Service Agents</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">ArXiv</span>
+        <a href="https://arxiv.org/abs/2605.12213" target="_blank" rel="noopener">Goal-Oriented Reasoning for RAG-based Memory in Conversational Agentic LLM Systems</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">HF Daily</span>
+        <a href="https://huggingface.co/papers/2605.12500" target="_blank" rel="noopener">SenseNova-U1: Unifying Multimodal Understanding and Generation with NEO-unify Architecture</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">HF Daily</span>
+        <a href="https://huggingface.co/papers/2605.12500" target="_blank" rel="noopener">·58 authors</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">HF Daily</span>
+        <a href="https://huggingface.co/papers/2605.09530" target="_blank" rel="noopener">MemPrivacy: Privacy-Preserving Personalized Memory Management for Edge-Cloud Agents</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">HF Daily</span>
+        <a href="https://huggingface.co/papers/2605.12357" target="_blank" rel="noopener">δ-mem: Efficient Online Memory for Large Language Models</a>
+      </div>
+      <div class="news-item">
+        <span class="badge">HF Daily</span>
+        <a href="https://huggingface.co/papers/2605.10899" target="_blank" rel="noopener">RubricEM: Meta-RL with Rubric-guided Policy Decomposition beyond Verifiable Rewards</a>
+      </div>
+    </section>
+
+    <div class="summary">
+      💡 数据来源：36氪 AI、TechCrunch、Hacker News、ArXiv、HuggingFace Daily Papers<br>
+      采集时间：2026-05-13 20:00 · 自动去重和AI关键词过滤
+    </div>
+
+    <div class="archive">
+      <h3>📅 历史归档</h3>
+      <div class="archive-links">
+          <a href="2026-04-29.html">2026-04-29</a>
+          <a href="2026-04-30.html">2026-04-30</a>
+          <a href="2026-05-01.html">2026-05-01</a>
+          <a href="2026-05-02.html">2026-05-02</a>
+          <a href="2026-05-03.html">2026-05-03</a>
+          <a href="2026-05-05.html">2026-05-05</a>
+          <a href="2026-05-06.html">2026-05-06</a>
+          <a href="2026-05-07.html">2026-05-07</a>
+          <a href="2026-05-08.html">2026-05-08</a>
+          <a href="2026-05-09.html">2026-05-09</a>
+          <a href="2026-05-10.html">2026-05-10</a>
+          <a href="2026-05-11.html">2026-05-11</a>
+          <a href="2026-05-12.html">2026-05-12</a>
+          <a href="2026-05-13.html">2026-05-13</a>
+      </div>
+    </div>
+
+    <footer>AI 资讯日报 · <a href="https://github.com/ikongsir/ai-news-daily" style="color:var(--accent)">GitHub</a></footer>
+  </div>
 </body>
 </html>
