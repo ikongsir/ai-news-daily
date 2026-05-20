@@ -1,78 +1,173 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>AI资讯日报 2026-05-20</title>
-<style>
-
-    body { max-width:900px; margin:0 auto; padding:20px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; background:#0d1117; color:#c9d1d9; }
-    h1 { color:#58a6ff; font-size:28px; margin-bottom:5px; }
-    .date { color:#8b949e; font-size:14px; margin-bottom:30px; }
-    .section { margin-bottom:30px; }
-    .section-title { font-size:20px; color:#f0883e; border-bottom:2px solid #30363d; padding-bottom:8px; margin-bottom:15px; }
-    .news-card { background:#161b22; border:1px solid #30363d; border-radius:8px; padding:14px 18px; margin-bottom:10px; }
-    .news-card a { color:#58a6ff; text-decoration:none; font-size:16px; }
-    .news-card a:hover { text-decoration:underline; }
-    .source-badge { display:inline-block; background:#1f6feb33; color:#58a6ff; padding:1px 8px; border-radius:12px; font-size:11px; margin-right:8px; }
-    .summary { color:#8b949e; font-size:14px; margin-top:6px; }
-    .archive { margin-top:40px; padding-top:20px; border-top:1px solid #30363d; }
-    .archive a { color:#58a6ff; margin-right:12px; font-size:13px; }
-    .footer { margin-top:30px; color:#8b949e; font-size:12px; text-align:center; }
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 资讯日报 - 2026-05-20</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0d1117; color: #c9d1d9; max-width: 800px; margin: 0 auto; padding: 20px;
+    }
+    header { text-align: center; padding: 30px 0; border-bottom: 1px solid #21262d; margin-bottom: 30px; }
+    header h1 { font-size: 1.8em; color: #58a6ff; }
+    header .date { color: #8b949e; margin-top: 10px; }
+    .section { margin-bottom: 30px; }
+    .section-title { font-size: 1.2em; color: #f0883e; padding: 10px 0; border-bottom: 1px solid #21262d; margin-bottom: 15px; }
+    .news-card {
+      background: #161b22; border: 1px solid #21262d; border-radius: 6px;
+      padding: 12px 16px; margin-bottom: 10px; display: flex; align-items: flex-start; gap: 10px;
+    }
+    .news-card:hover { border-color: #58a6ff; }
+    .source-badge {
+      background: #238636; color: #fff; padding: 2px 8px; border-radius: 12px;
+      font-size: 0.75em; white-space: nowrap; flex-shrink: 0;
+    }
+    .news-card a { color: #58a6ff; text-decoration: none; font-size: 0.95em; }
+    .news-card a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 20px 0; border-top: 1px solid #21262d; margin-top: 40px; color: #8b949e; font-size: 0.85em; }
+    footer a { color: #58a6ff; }
+    .archives { margin-top: 20px; }
+    .archives h3 { color: #f0883e; margin-bottom: 10px; }
+    .archive-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .archive-link { color: #58a6ff; font-size: 0.85em; }
+  </style>
 </head>
 <body>
-<h1>📡 AI资讯日报</h1>
-<div class="date">2026年5月20日 星期三</div>
+  <header>
+    <h1>📡 AI 资讯日报</h1>
+    <div class="date">{DATE}</div>
+  </header>
 
-<div class="section">
-<div class="section-title">━━━ 国内动态 ━━━</div>
-<div class="news-card"><span class="source-badge">36氪</span><a href="https://36kr.com/p/3815882846248450" target="_blank">AI创业公司一年狂揽800亿美元，OpenAI和Anthropic两家独吞89%，百模大战的终局不是百花齐放，而是赢家通吃。</a></div>
-<div class="news-card"><span class="source-badge">36氪</span><a href="https://36kr.com/p/3816839373456520" target="_blank">新的 Gemini 3.5、Agent 产品、视频模型都来了</a></div>
-<div class="news-card"><span class="source-badge">36氪</span><a href="https://36kr.com/p/3815823627050499" target="_blank">智能马桶、智能床，家居能靠AI翻红吗？</a></div>
-<div class="news-card"><span class="source-badge">36氪</span><a href="https://36kr.com/p/3816101079408649" target="_blank">demo越惊艳的机器人公司，死得越快？</a></div>
-<div class="news-card"><span class="source-badge">36氪</span><a href="https://36kr.com/p/3815882289192713" target="_blank">伯克利等发布FST框架：通过快慢分层解决大模型持续学习死局。</a></div>
-<div class="news-card"><span class="source-badge">36氪</span><a href="https://36kr.com/p/3815882774011653" target="_blank">你是否在使用Agent工作或者写代码时，总感觉上下文不够用？或者感觉反复使用Agent时并没有变得更聪明？感觉目前的记忆方案仍然不够用？今日，香港中文大学联合浙江大学发布的一篇论文关注了这个问题，并引起了学术界广泛讨论：你以为Agent在「</a></div>
-<div class="news-card"><span class="source-badge">36氪</span><a href="https://36kr.com/p/3816141172171016" target="_blank">富足的腾讯与饥饿的百度：BT的AI远虑近忧</a></div>
-<div class="news-card"><span class="source-badge">36氪</span><a href="https://36kr.com/p/3815960096284169" target="_blank">AI与艺术革命：从“像”的解放到“想”的让渡</a></div>
-<div class="news-card"><span class="source-badge">量子位</span><a href="https://www.qbitai.com/2026/05/420083.html" target="_blank">抢先李飞飞！世界模型能多人联机玩FPS游戏了</a></div>
-<div class="news-card"><span class="source-badge">量子位</span><a href="https://www.qbitai.com/2026/05/420084.html" target="_blank">国产GPU开始造世界！国内首个全栈具身智能仿真平台来了</a></div>
-<div class="news-card"><span class="source-badge">量子位</span><a href="https://www.qbitai.com/2026/05/419990.html" target="_blank">Cursor新模型，你怎么还在套Kimi？马斯克你怎么还吆喝上了？？</a></div>
+  <div class="section">
+    <div class="section-title">━━━ 国内动态 ━━━</div>
+      <div class="news-card">
+        <span class="source-badge">量子位</span>
+        <a href="https://www.qbitai.com/2026/05/420703.html" target="_blank" rel="noopener">VC、品牌顾问、编剧，正在批量把自己做成AI</a>
+      </div>
+      <div class="news-card">
+        <span class="source-badge">量子位</span>
+        <a href="https://www.qbitai.com/2026/05/420698.html" target="_blank" rel="noopener">AIDC建设正从“通用标准”走向“适用高效”</a>
+      </div>
+      <div class="news-card">
+        <span class="source-badge">量子位</span>
+        <a href="https://www.qbitai.com/2026/05/420681.html" target="_blank" rel="noopener">破壁行动！把大厂级“研发外挂”发给每一个创新者，智会心研PLUS版免费公测</a>
+      </div>
+      <div class="news-card">
+        <span class="source-badge">量子位</span>
+        <a href="https://www.qbitai.com/2026/05/420656.html" target="_blank" rel="noopener">2026中国AIGC最值得关注的企业&产品图鉴来了！谁在造浪，谁在落地？</a>
+      </div>
+      <div class="news-card">
+        <span class="source-badge">量子位</span>
+        <a href="https://www.qbitai.com/2026/05/420651.html" target="_blank" rel="noopener">趋境科技完成数亿元Pre-A轮融资，高品质AI Token生产基础设施</a>
+      </div>
+      <div class="news-card">
+        <span class="source-badge">36氪</span>
+        <a href="https://36kr.com/p/3816286668342409" target="_blank" rel="noopener">单轮融资百亿起跳，AI大模型进入资本疯抢时刻。</a>
+      </div>
+      <div class="news-card">
+        <span class="source-badge">36氪</span>
+        <a href="https://36kr.com/p/3817321803931910" target="_blank" rel="noopener">谷歌最新发布会：没发最强模型，开卷Agent全家桶</a>
+      </div>
+      <div class="news-card">
+        <span class="source-badge">36氪</span>
+        <a href="https://36kr.com/p/3817353357968516" target="_blank" rel="noopener">第四届中国AIGC产业峰会在京顺利举办！近20位行业大咖解码Agent与非共识机遇</a>
+      </div>
+      <div class="news-card">
+        <span class="source-badge">36氪</span>
+        <a href="https://36kr.com/p/3817196535071624" target="_blank" rel="noopener">“卡神”转投Anthropic，工作岗位是“最危险的AI”</a>
+      </div>
+      <div class="news-card">
+        <span class="source-badge">36氪</span>
+        <a href="https://36kr.com/p/3817204916356229" target="_blank" rel="noopener">Google I/O大会释放竞争决心：搜索迎来历史性更新，AI进入一切</a>
+      </div>
+  </div>
 
-</div>
+  <div class="section">
+    <div class="section-title">━━━ 国际动态 ━━━</div>
+      <div class="news-card">
+        <span class="source-badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/19/ai-design-tools-are-the-next-big-battleground-and-google-is-going-all-in-at-io-2026/" target="_blank" rel="noopener">Google just declared itself a contender in AI design at IO 2026</a>
+      </div>
+      <div class="news-card">
+        <span class="source-badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/19/you-can-now-talk-to-your-gmail-inbox-as-seen-at-google-io-2026/" target="_blank" rel="noopener">You can now talk to your Gmail inbox, as seen at Google IO 2026</a>
+      </div>
+      <div class="news-card">
+        <span class="source-badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/19/how-to-use-googles-new-ai-agents-to-go-beyond-your-standard-searches/" target="_blank" rel="noopener">How to use Google’s new AI agents to go beyond your standard searches</a>
+      </div>
+      <div class="news-card">
+        <span class="source-badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/19/from-teen-hacker-to-iron-dome-researcher-this-founder-raised-28m-to-fight-ai-phishing/" target="_blank" rel="noopener">From teen hacker to Iron Dome researcher, this founder raised $28M to fight AI phishing</a>
+      </div>
+      <div class="news-card">
+        <span class="source-badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/19/elon-musk-said-sam-altman-stole-a-non-profit-but-the-trial-showed-he-had-similar-aims/" target="_blank" rel="noopener">Elon Musk said Sam Altman ‘stole’ a non-profit — but the trial showed he had similar aims</a>
+      </div>
+      <div class="news-card">
+        <span class="source-badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/19/google-takes-a-page-out-of-metas-book-announces-new-audio-powered-smart-glasses-at-io-2026/" target="_blank" rel="noopener">Google takes a page out of Meta’s book, announces new audio-powered smart glasses at IO 2026</a>
+      </div>
+      <div class="news-card">
+        <span class="source-badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/19/googles-genie-world-model-can-now-simulate-real-streets-with-street-view/" target="_blank" rel="noopener">Google’s Genie world model can now simulate real streets with Street View</a>
+      </div>
+      <div class="news-card">
+        <span class="source-badge">TechCrunch</span>
+        <a href="https://techcrunch.com/2026/05/19/with-gemini-3-5-flash-google-bets-its-next-ai-wave-on-agents-not-chatbots/" target="_blank" rel="noopener">With Gemini 3.5 Flash, Google bets its next AI wave on agents, not chatbots</a>
+      </div>
+  </div>
 
-<div class="section">
-<div class="section-title">━━━ 国际动态 ━━━</div>
-<div class="news-card"><span class="source-badge">TechCrunch</span><a href="https://techcrunch.com/2026/05/19/agentic-app-coding-gets-an-upgrade-with-googles-release-of-android-cli/" target="_blank">Agentic app coding gets an upgrade with Google’s release of Android CLI</a></div>
-<div class="news-card"><span class="source-badge">TechCrunch</span><a href="https://techcrunch.com/2026/05/19/with-gemini-3-5-flash-google-bets-its-next-ai-wave-on-agents-not-chatbots/" target="_blank">With Gemini 3.5 Flash, Google bets its next AI wave on agents, not chatbots</a></div>
-<div class="news-card"><span class="source-badge">TechCrunch</span><a href="https://techcrunch.com/2026/05/19/googles-ai-studio-now-lets-anyone-build-android-apps-in-minutes/" target="_blank">Google’s AI Studio now lets anyone build Android apps in minutes</a></div>
-<div class="news-card"><span class="source-badge">TechCrunch</span><a href="https://techcrunch.com/2026/05/19/google-introduces-gemini-spark-a-24-7-agentic-assistant-with-gmail-integration/" target="_blank">Google introduces Gemini Spark, a 24/7 agentic assistant with Gmail integration, at IO 2026</a></div>
-<div class="news-card"><span class="source-badge">TechCrunch</span><a href="https://techcrunch.com/2026/05/19/google-updates-its-gemini-app-to-take-on-chatgpt-and-claude-at-io-2026/" target="_blank">Google updates its Gemini app to take on ChatGPT and Claude at IO 2026</a></div>
-<div class="news-card"><span class="source-badge">TechCrunch</span><a href="https://techcrunch.com/2026/05/19/openai-co-founder-andrej-karpathy-joins-anthropics-pre-training-team/" target="_blank">OpenAI co-founder Andrej Karpathy joins Anthropic’s pre-training team</a></div>
-<div class="news-card"><span class="source-badge">TechCrunch</span><a href="https://techcrunch.com/2026/05/18/anthropic-has-acquired-the-dev-tools-startup-used-by-openai-google-and-cloudflare/" target="_blank">Anthropic has acquired the dev tools startup used by OpenAI, Google, and Cloudflare</a></div>
-<div class="news-card"><span class="source-badge">TechCrunch</span><a href="https://techcrunch.com/2026/05/18/elon-musk-has-lost-his-lawsuit-against-sam-altman-and-openai/" target="_blank">Elon Musk has lost his lawsuit against Sam Altman and OpenAI</a></div>
-<div class="news-card"><span class="source-badge">TechCrunch</span><a href="https://techcrunch.com/2026/05/17/why-trust-is-a-big-question-at-the-elon-musk-openai-trial/" target="_blank">Why trust is a big question at the Elon Musk-OpenAI trial</a></div>
-<div class="news-card"><span class="source-badge">TechCrunch</span><a href="https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/" target="_blank">OpenAI launches ChatGPT for personal finance, will let you connect bank accounts</a></div>
-<div class="news-card"><span class="source-badge">Hacker News</span><a href="https://twitter.com/mitchellh/status/2055380239711457578" target="_blank">I believe there are entire companies right now under AI psychosis</a></div>
-<div class="news-card"><span class="source-badge">Hacker News</span><a href="https://twitter.com/karpathy/status/2056753169888334312" target="_blank">I’ve joined Anthropic</a></div>
+  <div class="section">
+    <div class="section-title">━━━ 今日论文推荐 ━━━</div>
+      <div class="news-card">
+        <span class="source-badge">ArXiv</span>
+        <a href="https://arxiv.org/abs/2605.20173" target="_blank" rel="noopener">A Methodology for Selecting and Composing Runtime Architecture Patterns for Production LLM Agents</a>
+      </div>
+      <div class="news-card">
+        <span class="source-badge">ArXiv</span>
+        <a href="https://arxiv.org/abs/2605.20072" target="_blank" rel="noopener">Probing Embodied LLMs: When Higher Observation Fidelity Hurts Problem Solving</a>
+      </div>
+      <div class="news-card">
+        <span class="source-badge">ArXiv</span>
+        <a href="https://arxiv.org/abs/2605.20023" target="_blank" rel="noopener">When Skills Don't Help: A Negative Result on Procedural Knowledge for Tool-Grounded Agents in Offensive Cybersecurity</a>
+      </div>
+      <div class="news-card">
+        <span class="source-badge">ArXiv</span>
+        <a href="https://arxiv.org/abs/2605.20006" target="_blank" rel="noopener">GeoX: Mastering Geospatial Reasoning Through Self-Play and Verifiable Rewards</a>
+      </div>
+      <div class="news-card">
+        <span class="source-badge">ArXiv</span>
+        <a href="https://arxiv.org/abs/2605.19932" target="_blank" rel="noopener">PEEK: Context Map as an Orientation Cache for Long-Context LLM Agents</a>
+      </div>
+  </div>
 
-</div>
+  <footer>
+    <p>💡 数据来源实时采集，仅供参考</p>
+    <p>🌐 国内可访问: <a href="https://ikongsir.github.io/ai-news-daily/">https://ikongsir.github.io/ai-news-daily/</a></p>
+    <div class="archives">
+      <h3>历史归档</h3>
+      <div class="archive-list" id="archive-list"></div>
+    </div>
+  </footer>
 
-<div class="section">
-<div class="section-title">━━━ 今日论文推荐 ━━━</div>
-<div class="news-card"><span class="source-badge">ArXiv</span><a href="https://arxiv.org/abs/2605.18693" target="_blank">Title:SkillGenBench: Benchmarking Skill Generation Pipelines for LLM Agents</a></div>
-<div class="news-card"><span class="source-badge">ArXiv</span><a href="https://arxiv.org/abs/2605.18104" target="_blank">Title:Safety Geometry Collapse in Multimodal LLMs and Adaptive Drift Correction</a></div>
-<div class="news-card"><span class="source-badge">ArXiv</span><a href="https://arxiv.org/abs/2605.18299" target="_blank">Title:SD-Search: On-Policy Hindsight Self-Distillation for Search-Augmented Reasoning</a></div>
-<div class="news-card"><span class="source-badge">ArXiv</span><a href="https://arxiv.org/abs/2605.18077" target="_blank">Title:LLM-Guided Communication for Cooperative Multi-Agent Reinforcement Learning</a></div>
-<div class="news-card"><span class="source-badge">ArXiv</span><a href="https://arxiv.org/abs/2605.18672" target="_blank">Title:Position: A Three-Layer Probabilistic Assume-Guarantee Architecture Is Structurally Required for Safe LLM Agent Deployment</a></div>
-<div class="news-card"><span class="source-badge">ArXiv</span><a href="https://arxiv.org/abs/2605.18630" target="_blank">Title:SCICONVBENCH: Benchmarking LLMs on Multi-Turn Clarification for Task Formulation in Computational Science</a></div>
-
-</div>
-
-<div class="footer">
-<p>💡 数据来源实时采集，仅供参考 | Powered by Hermes Agent</p>
-<p>🌐 网站入口：<a href="https://ikongsir.github.io/ai-news-daily/">https://ikongsir.github.io/ai-news-daily/</a></p>
-</div>
+  <script>
+    // Load archive list
+    fetch('index.json')
+      .then(r => r.json())
+      .then(data => {{
+        const list = document.getElementById('archive-list');
+        const dates = data.dates || [];
+        dates.forEach(d => {{
+          const a = document.createElement('a');
+          a.href = d + '.html';
+          a.className = 'archive-link';
+          a.textContent = d;
+          list.appendChild(a);
+        }});
+      }});
+  </script>
 </body>
 </html>
