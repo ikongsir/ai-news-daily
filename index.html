@@ -1,201 +1,155 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI 资讯日报 - 2026-05-21</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0d1117; color: #c9d1d9; max-width: 800px; margin: 0 auto; padding: 20px;
-    }
-    header { text-align: center; padding: 30px 0; border-bottom: 1px solid #21262d; margin-bottom: 30px; }
-    header h1 { font-size: 1.8em; color: #58a6ff; }
-    header .date { color: #8b949e; margin-top: 10px; }
-    .section { margin-bottom: 30px; }
-    .section-title { font-size: 1.2em; color: #f0883e; padding: 10px 0; border-bottom: 1px solid #21262d; margin-bottom: 15px; }
-    .news-card {
-      background: #161b22; border: 1px solid #21262d; border-radius: 6px;
-      padding: 12px 16px; margin-bottom: 10px; display: flex; align-items: flex-start; gap: 10px;
-    }
-    .news-card:hover { border-color: #58a6ff; }
-    .source-badge {
-      background: #238636; color: #fff; padding: 2px 8px; border-radius: 12px;
-      font-size: 0.75em; white-space: nowrap; flex-shrink: 0;
-    }
-    .news-card a { color: #58a6ff; text-decoration: none; font-size: 0.95em; }
-    .news-card a:hover { text-decoration: underline; }
-    footer { text-align: center; padding: 20px 0; border-top: 1px solid #21262d; margin-top: 40px; color: #8b949e; font-size: 0.85em; }
-    footer a { color: #58a6ff; }
-    .archives { margin-top: 20px; }
-    .archives h3 { color: #f0883e; margin-bottom: 10px; }
-    .archive-list { display: flex; flex-wrap: wrap; gap: 8px; }
-    .archive-link { color: #58a6ff; font-size: 0.85em; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 资讯日报 - 2026-05-21</title>
+<style>
+:root {
+  --bg: #0d1117;
+  --card: #161b22;
+  --border: #30363d;
+  --text: #e6edf3;
+  --text-dim: #8b949e;
+  --accent: #58a6ff;
+  --green: #3fb950;
+  --orange: #d29922;
+  --red: #f85149;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6; padding: 20px;
+}
+.container { max-width: 860px; margin: 0 auto; }
+header {
+  text-align: center; padding: 40px 0 30px;
+  border-bottom: 1px solid var(--border); margin-bottom: 30px;
+}
+header h1 { font-size: 1.8em; margin-bottom: 8px; }
+header .subtitle { color: var(--text-dim); font-size: 0.9em; }
+section { margin-bottom: 30px; }
+section h2 {
+  font-size: 1.3em; margin-bottom: 16px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--border);
+}
+.news-card {
+  display: block; padding: 12px 16px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 6px; margin-bottom: 8px;
+  text-decoration: none; color: var(--text);
+  transition: border-color 0.2s;
+}
+.news-card:hover { border-color: var(--accent); }
+.source-badge {
+  display: inline-block; padding: 2px 8px;
+  border-radius: 12px; font-size: 0.75em;
+  background: rgba(88,166,255,0.15); color: var(--accent);
+  margin-right: 10px; white-space: nowrap;
+}
+.news-title { font-size: 0.92em; }
+.archives { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); }
+.archives h3 { font-size: 1.1em; margin-bottom: 12px; color: var(--text-dim); }
+.archive-link {
+  display: inline-block; padding: 4px 12px; margin: 3px 6px 3px 0;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 4px; color: var(--text-dim); text-decoration: none;
+  font-size: 0.85em; transition: all 0.2s;
+}
+.archive-link:hover { border-color: var(--accent); color: var(--accent); }
+footer {
+  text-align: center; padding: 30px 0 20px;
+  color: var(--text-dim); font-size: 0.85em;
+  border-top: 1px solid var(--border); margin-top: 30px;
+}
+footer a { color: var(--accent); text-decoration: none; }
+@media (max-width: 600px) {
+  body { padding: 12px; }
+  header h1 { font-size: 1.4em; }
+}
+</style>
 </head>
 <body>
-  <header>
-    <h1>📡 AI 资讯日报</h1>
-    <div class="date">2026-05-21</div>
-  </header>
+<div class="container">
+<header>
+  <h1>📡 AI 资讯日报</h1>
+  <div class="subtitle">2026-05-21 · 国内 12 条 / 国际 12 条 / 论文 8 篇</div>
+</header>
 
-  <div class="section">
-    <div class="section-title">━━━ 国内动态 ━━━</div>
-      <div class="news-card">
-        <span class="source-badge">量子位</span>
-        <a href="https://www.qbitai.com/2026/05/420753.html" target="_blank" rel="noopener">智象未来超两千亿参数图像大模型HiDream-O1-Image-Pro发布，融资持续提速</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">量子位</span>
-        <a href="https://www.qbitai.com/2026/05/420743.html" target="_blank" rel="noopener">太初元碁洪源：异构计算能力将成为未来AI算力基础设施的重要方向｜AIGC2026</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">量子位</span>
-        <a href="https://www.qbitai.com/2026/05/420703.html" target="_blank" rel="noopener">VC、品牌顾问、编剧，正在批量把自己做成AI</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">量子位</span>
-        <a href="https://www.qbitai.com/2026/05/420698.html" target="_blank" rel="noopener">AIDC建设正从&quot;通用标准&quot;走向&quot;适用高效&quot;</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">量子位</span>
-        <a href="https://www.qbitai.com/2026/05/420681.html" target="_blank" rel="noopener">破壁行动！把大厂级&quot;研发外挂&quot;发给每一个创新者，智会心研PLUS版免费公测</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">36氪</span>
-        <a href="https://36kr.com/p/3817688431255553" target="_blank" rel="noopener">Google新AI「付费墙」实测：对「白嫖党」友好，但山猪没得细糠吃</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">36氪</span>
-        <a href="https://36kr.com/p/3818273462387592" target="_blank" rel="noopener">什么叫AI原生组织？如何打造AI原生组织？</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">36氪</span>
-        <a href="https://36kr.com/p/3817645558694788" target="_blank" rel="noopener">时薪800、学历硕士起：大厂热抢的AI数据“炼金师”到底在做什么？</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">36氪</span>
-        <a href="https://36kr.com/p/3817576434868489" target="_blank" rel="noopener">Agent改写互联网，赢家通吃越来越难了</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">36氪</span>
-        <a href="https://36kr.com/p/3817576331747331" target="_blank" rel="noopener">谷歌打响反击战，Antigravity 2.0上手：开放模型是步聪明棋</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">36氪</span>
-        <a href="https://36kr.com/p/3817538261681030" target="_blank" rel="noopener">AI破坏力真正爆发时，监管明显被忘在了身后</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">36氪</span>
-        <a href="https://36kr.com/p/3817523788914952" target="_blank" rel="noopener">苹果转身，三星入局：AI眼镜为何成为巨头必争之地？</a>
-      </div>
-  </div>
+<section>
+  <h2>🇨🇳 国内动态</h2>
+  <a href="https://36kr.com/p/3818972597142664" class="news-card" target="_blank" rel="noopener"><span class="source-badge">36氪</span><span class="news-title">AI东风，能送长鑫上万亿市值吗？</span></a>
+<a href="https://36kr.com/p/3818909512687875" class="news-card" target="_blank" rel="noopener"><span class="source-badge">36氪</span><span class="news-title">为了还原具身智能科研市场的全貌，我们找了多个头部高校聊聊</span></a>
+<a href="https://36kr.com/p/3818942804050823" class="news-card" target="_blank" rel="noopener"><span class="source-badge">36氪</span><span class="news-title">被 AI 误杀的美股 SaaS，正在迎来一场估值复仇</span></a>
+<a href="https://36kr.com/p/3818940918727810" class="news-card" target="_blank" rel="noopener"><span class="source-badge">36氪</span><span class="news-title">宇树科技的同行冲击IPO，由90后哈工大博士带领，腾讯、深创投入股</span></a>
+<a href="https://36kr.com/p/3818829160170633" class="news-card" target="_blank" rel="noopener"><span class="source-badge">36氪</span><span class="news-title">“一人公司”火了，谁靠AI员工挣到第一桶金？</span></a>
+<a href="https://www.qbitai.com/2026/05/422002.html" class="news-card" target="_blank" rel="noopener"><span class="source-badge">量子位</span><span class="news-title">AI首次实现中国风光发电普查，北大、阿里达摩院研究登上《自然》</span></a>
+<a href="https://www.qbitai.com/2026/05/422009.html" class="news-card" target="_blank" rel="noopener"><span class="source-badge">量子位</span><span class="news-title">Artificial Analysis放榜：千问3.7问鼎国产模型冠军，全球前五</span></a>
+<a href="https://www.qbitai.com/2026/05/422001.html" class="news-card" target="_blank" rel="noopener"><span class="source-badge">量子位</span><span class="news-title">风行在线CEO易正朝：先全员Coding，再All in众创丨AIGC2026</span></a>
+<a href="https://www.qbitai.com/2026/05/422032.html" class="news-card" target="_blank" rel="noopener"><span class="source-badge">量子位</span><span class="news-title">菲尔兹奖得主都看懵了：OpenAI非数学模型首次自主突破80年未解数学难题</span></a>
+<a href="https://www.qbitai.com/2026/05/422068.html" class="news-card" target="_blank" rel="noopener"><span class="source-badge">量子位</span><span class="news-title">腾讯混元开源全新翻译模型Hy-MT2 ，上线小程序「腾讯Hy翻译」</span></a>
+<a href="https://36kr.com/p/3818940869280643" class="news-card" target="_blank" rel="noopener"><span class="source-badge">36氪</span><span class="news-title">刚刚，Anthropic买下了SDK工具公司Stainless，从开源MCP到收购Stainless，Anthropic的智能体棋盘已集齐模型、接口、连接三件套。</span></a>
+<a href="https://36kr.com/p/3818881466844290" class="news-card" target="_blank" rel="noopener"><span class="source-badge">36氪</span><span class="news-title">AI助手们，骗了人不能只说“对不起”</span></a>
+</section>
 
-  <div class="section">
-    <div class="section-title">━━━ 国际动态 ━━━</div>
-      <div class="news-card">
-        <span class="source-badge">TechCrunch</span>
-        <a href="https://techcrunch.com/2026/05/20/xai-burned-6-4b-last-year-spacexs-ipo-filing-shows-why-the-spending-is-far-from-over/" target="_blank" rel="noopener">xAI burned $6.4B last year — SpaceX’s IPO filing shows why the spending is far from over</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">TechCrunch</span>
-        <a href="https://techcrunch.com/2026/05/20/nvidia-posts-another-record-quarter-reveals-43-billion-of-holdings-in-startups/" target="_blank" rel="noopener">Nvidia posts another record quarter, reveals $43B of holdings in startups</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">TechCrunch</span>
-        <a href="https://techcrunch.com/2026/05/20/musks-xai-is-being-sued-over-its-data-center-generators-now-its-buying-2-8b-more/" target="_blank" rel="noopener">Musk’s xAI is being sued over its data center generators — now it’s buying $2.8B more</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">TechCrunch</span>
-        <a href="https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/" target="_blank" rel="noopener">Anthropic will pay xAI $1.25B per month for compute</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">TechCrunch</span>
-        <a href="https://techcrunch.com/2026/05/20/openai-claims-it-solved-an-80-year-old-math-problem-for-real-this-time/" target="_blank" rel="noopener">OpenAI claims it solved an 80-year-old math problem — for real this time</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">TechCrunch</span>
-        <a href="https://techcrunch.com/2026/05/20/irisgo-a-startup-backed-by-andrew-ng-looks-to-become-the-ai-desktop-buddy-you-never-knew-you-needed/" target="_blank" rel="noopener">IrisGo, a startup backed by Andrew Ng, looks to become the AI desktop buddy you never knew you needed</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">TechCrunch</span>
-        <a href="https://techcrunch.com/2026/05/20/openai-barrels-toward-ipo-that-may-happen-in-september/" target="_blank" rel="noopener">OpenAI barrels toward IPO that may happen in September</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">TechCrunch</span>
-        <a href="https://techcrunch.com/2026/05/20/ai-search-startups-are-blowing-up/" target="_blank" rel="noopener">AI search startups are blowing up</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">TechCrunch</span>
-        <a href="https://techcrunch.com/2026/05/20/stability-ai-release-a-new-audio-model-that-can-create-six-minute-songs/" target="_blank" rel="noopener">Stability AI releases a new audio model that can create 6-minute songs</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">TechCrunch</span>
-        <a href="https://techcrunch.com/2026/05/20/figma-adds-an-ai-assistant-to-its-collaborative-canvas/" target="_blank" rel="noopener">Figma adds an AI assistant to its collaborative canvas</a>
-      </div>
-  </div>
+<section>
+  <h2>🌐 国际动态</h2>
+  <a href="https://techcrunch.com/2026/05/20/jensen-huang-says-hes-found-a-brand-new-200b-market-for-nvidia/" class="news-card" target="_blank" rel="noopener"><span class="source-badge">TechCrunch</span><span class="news-title">Jensen Huang says he’s found a ‘brand new’ $200B market for Nvidia</span></a>
+<a href="https://techcrunch.com/2026/05/20/anthropic-says-its-about-to-have-its-first-profitable-quarter/" class="news-card" target="_blank" rel="noopener"><span class="source-badge">TechCrunch</span><span class="news-title">Anthropic says it’s about to have its first profitable quarter</span></a>
+<a href="https://techcrunch.com/2026/05/20/xai-burned-6-4b-last-year-spacexs-ipo-filing-shows-why-the-spending-is-far-from-over/" class="news-card" target="_blank" rel="noopener"><span class="source-badge">TechCrunch</span><span class="news-title">xAI burned $6.4B last year — SpaceX’s IPO filing shows why the spending is far from over</span></a>
+<a href="https://techcrunch.com/2026/05/20/nvidia-posts-another-record-quarter-reveals-43-billion-of-holdings-in-startups/" class="news-card" target="_blank" rel="noopener"><span class="source-badge">TechCrunch</span><span class="news-title">Nvidia posts another record quarter, reveals $43B of holdings in startups</span></a>
+<a href="https://techcrunch.com/2026/05/20/musks-xai-is-being-sued-over-its-data-center-generators-now-its-buying-2-8b-more/" class="news-card" target="_blank" rel="noopener"><span class="source-badge">TechCrunch</span><span class="news-title">Musk’s xAI is being sued over its data center generators — now it’s buying $2.8B more</span></a>
+<a href="https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/" class="news-card" target="_blank" rel="noopener"><span class="source-badge">TechCrunch</span><span class="news-title">Anthropic will pay xAI $1.25B per month for compute</span></a>
+<a href="https://techcrunch.com/2026/05/20/openai-claims-it-solved-an-80-year-old-math-problem-for-real-this-time/" class="news-card" target="_blank" rel="noopener"><span class="source-badge">TechCrunch</span><span class="news-title">OpenAI claims it solved an 80-year-old math problem — for real this time</span></a>
+<a href="https://techcrunch.com/2026/05/20/irisgo-a-startup-backed-by-andrew-ng-looks-to-become-the-ai-desktop-buddy-you-never-knew-you-needed/" class="news-card" target="_blank" rel="noopener"><span class="source-badge">TechCrunch</span><span class="news-title">IrisGo, a startup backed by Andrew Ng, looks to become the AI desktop buddy you never knew you needed</span></a>
+<a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/" class="news-card" target="_blank" rel="noopener"><span class="source-badge">Hacker News</span><span class="news-title">An OpenAI model has disproved a central conjecture in discrete geometry</span></a>
+<a href="https://twitter.com/nottombrown/status/2057194829986300375" class="news-card" target="_blank" rel="noopener"><span class="source-badge">Hacker News</span><span class="news-title">Anthropic is expanding to Colossus2. Will use GB200</span></a>
+<a href="https://blog.google/products/ads-commerce/google-marketing-live-search-ads/" class="news-card" target="_blank" rel="noopener"><span class="source-badge">Hacker News</span><span class="news-title">Google officially announces that ads will be included in AI Mode search results</span></a>
+<a href="https://www.wsj.com/tech/ai/openai-is-preparing-to-file-for-an-ipo-very-soon-0ec95af5" class="news-card" target="_blank" rel="noopener"><span class="source-badge">Hacker News</span><span class="news-title">OpenAI Is Preparing to File for an IPO Soon</span></a>
+</section>
 
-  <div class="section">
-    <div class="section-title">━━━ 今日论文推荐 ━━━</div>
-      <div class="news-card">
-        <span class="source-badge">ArXiv</span>
-        <a href="https://arxiv.org/abs/2605.20173" target="_blank" rel="noopener">A Methodology for Selecting and Composing Runtime Architecture Patterns for Production LLM Agents</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">ArXiv</span>
-        <a href="https://arxiv.org/abs/2605.20072" target="_blank" rel="noopener">Probing Embodied LLMs: When Higher Observation Fidelity Hurts Problem Solving</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">ArXiv</span>
-        <a href="https://arxiv.org/abs/2605.20023" target="_blank" rel="noopener">When Skills Don't Help: A Negative Result on Procedural Knowledge for Tool-Grounded Agents in Offensive Cybersecurity</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">ArXiv</span>
-        <a href="https://arxiv.org/abs/2605.20006" target="_blank" rel="noopener">GeoX: Mastering Geospatial Reasoning Through Self-Play and Verifiable Rewards</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">ArXiv</span>
-        <a href="https://arxiv.org/abs/2605.19932" target="_blank" rel="noopener">PEEK: Context Map as an Orientation Cache for Long-Context LLM Agents</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">ArXiv</span>
-        <a href="https://arxiv.org/abs/2605.19895" target="_blank" rel="noopener">Streamlined Constraint Reasoning via CNN Pattern Recognition on Enumerated Solutions</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">ArXiv</span>
-        <a href="https://arxiv.org/abs/2605.19824" target="_blank" rel="noopener">From Prompts to Pavement Through Time: Temporal Grounding in Agentic Scene-to-Plan Reasoning</a>
-      </div>
-      <div class="news-card">
-        <span class="source-badge">ArXiv</span>
-        <a href="https://arxiv.org/abs/2605.19782" target="_blank" rel="noopener">Prior Knowledge or Search? A Study of LLM Agents in Hardware-Aware Code Optimization</a>
-      </div>
-  </div>
+<section>
+  <h2>📄 今日论文推荐</h2>
+  <a href="https://arxiv.org/abs/arXiv:2605.21482" class="news-card" target="_blank" rel="noopener"><span class="source-badge">ArXiv</span><span class="news-title">DeepWeb-Bench: A Deep Research Benchmark Demanding Massive Cross-Source Evidence and Long-Horizon Derivation</span></a>
+<a href="https://arxiv.org/abs/arXiv:2605.21427" class="news-card" target="_blank" rel="noopener"><span class="source-badge">ArXiv</span><span class="news-title">PALS: Power-Aware LLM Serving for Mixture-of-Experts Models</span></a>
+<a href="https://arxiv.org/abs/arXiv:2605.21413" class="news-card" target="_blank" rel="noopener"><span class="source-badge">ArXiv</span><span class="news-title">Teaching AI Through Benchmark Construction: QuestBench as a Course-Based Practice for Accountable Knowledge Work</span></a>
+<a href="https://arxiv.org/abs/arXiv:2605.21347" class="news-card" target="_blank" rel="noopener"><span class="source-badge">ArXiv</span><span class="news-title">Insights Generator: Systematic Corpus-Level Trace Diagnostics for LLM Agents</span></a>
+<a href="https://arxiv.org/abs/arXiv:2605.21082" class="news-card" target="_blank" rel="noopener"><span class="source-badge">ArXiv</span><span class="news-title">AutoRPA: Efficient GUI Automation through LLM-Driven Code Synthesis from Interactions</span></a>
+<a href="https://arxiv.org/abs/arXiv:2605.20874" class="news-card" target="_blank" rel="noopener"><span class="source-badge">ArXiv</span><span class="news-title">Governance by Construction for Generalist Agents</span></a>
+<a href="https://arxiv.org/abs/arXiv:2605.20873" class="news-card" target="_blank" rel="noopener"><span class="source-badge">ArXiv</span><span class="news-title">PlanningBench: Generating Scalable and Verifiable Planning Data for Evaluating and Training Large Language Models</span></a>
+<a href="https://arxiv.org/abs/arXiv:2605.20834" class="news-card" target="_blank" rel="noopener"><span class="source-badge">ArXiv</span><span class="news-title">Conditional Equivalence of DPO and RLHF: Implicit Assumption, Failure Modes, and Provable Alignment</span></a>
+</section>
 
-  <footer>
-    <p>💡 数据来源实时采集，仅供参考</p>
-    <p>🌐 网站入口: <a href="https://ikongsir.github.io/ai-news-daily/">https://ikongsir.github.io/ai-news-daily/</a></p>
-    <div class="archives">
-      <h3>历史归档</h3>
-      <div class="archive-list" id="archive-list"></div>
-    </div>
-  </footer>
+<div class="archives">
+  <h3>📚 历史归档</h3>
+  <a href="2026-05-21.html" class="archive-link">📅 2026-05-21</a>
+<a href="2026-05-20.html" class="archive-link">📅 2026-05-20</a>
+<a href="2026-05-19.html" class="archive-link">📅 2026-05-19</a>
+<a href="2026-05-18.html" class="archive-link">📅 2026-05-18</a>
+<a href="2026-05-17.html" class="archive-link">📅 2026-05-17</a>
+<a href="2026-05-16.html" class="archive-link">📅 2026-05-16</a>
+<a href="2026-05-15.html" class="archive-link">📅 2026-05-15</a>
+<a href="2026-05-14.html" class="archive-link">📅 2026-05-14</a>
+<a href="2026-05-13.html" class="archive-link">📅 2026-05-13</a>
+<a href="2026-05-12.html" class="archive-link">📅 2026-05-12</a>
+<a href="2026-05-11.html" class="archive-link">📅 2026-05-11</a>
+<a href="2026-05-10.html" class="archive-link">📅 2026-05-10</a>
+<a href="2026-05-09.html" class="archive-link">📅 2026-05-09</a>
+<a href="2026-05-08.html" class="archive-link">📅 2026-05-08</a>
+<a href="2026-05-07.html" class="archive-link">📅 2026-05-07</a>
+<a href="2026-05-06.html" class="archive-link">📅 2026-05-06</a>
+<a href="2026-05-05.html" class="archive-link">📅 2026-05-05</a>
+<a href="2026-05-03.html" class="archive-link">📅 2026-05-03</a>
+<a href="2026-05-02.html" class="archive-link">📅 2026-05-02</a>
+<a href="2026-05-01.html" class="archive-link">📅 2026-05-01</a>
+<a href="2026-04-30.html" class="archive-link">📅 2026-04-30</a>
+<a href="2026-04-29.html" class="archive-link">📅 2026-04-29</a>
+</div>
 
-  <script>
-    // Load archive list
-    fetch('index.json')
-      .then(r => r.json())
-      .then(data => {{
-        const list = document.getElementById('archive-list');
-        const dates = data.dates || [];
-        dates.forEach(d => {{
-          const a = document.createElement('a');
-          a.href = d + '.html';
-          a.className = 'archive-link';
-          a.textContent = d;
-          list.appendChild(a);
-        }});
-      }});
-  </script>
+<footer>
+  数据源自实时采集 · 仅供参考 · <a href="https://ikongsir.github.io/ai-news-daily/">GitHub Pages</a>
+</footer>
+</div>
 </body>
 </html>
